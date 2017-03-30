@@ -1,0 +1,12 @@
+// Tablet to desktop
+$lg-grid: (
+  columns: 12,
+  gutter: 30px,
+  media: 1024px
+);
+
+$sm-grid: (
+	columns: 4,
+	gutter: 30px,
+	media: 768px
+)

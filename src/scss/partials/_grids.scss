@@ -1,0 +1,21 @@
+.container {
+	@include grid-container();
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+@for $i from 1 through 12 {
+	.grid-lg-#{$i} {
+		@include grid-media($lg-grid) {
+			@include grid-column($i);
+		}
+	}
+}
+
+// @for $i from 1 through 4 {
+// 	.grid-sm-#{$i} {
+// 		@include grid-media($sm-grid) {
+// 			@include grid-column($i);
+// 		}
+// 	}
+// }

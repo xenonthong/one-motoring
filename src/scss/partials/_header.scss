@@ -1,0 +1,48 @@
+.header {
+	background: $white;
+	padding: 35px 0px;
+}
+
+.nav {
+	margin-top: 25px;
+	@include grid-container;
+
+	@at-root {
+		#{&}__links {
+			font-family: $font-pri--black;
+			float: left;
+		}
+
+		#{&}__link {
+			float: left;
+			margin-left: 20px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			.fa {
+				font-size: 18px;
+			}
+
+			a {
+				color: $grey;
+			}
+		}
+
+		#{&}__search {
+			float: left;
+			max-width: 200px;
+			height: 40px;
+			padding: 10px 15px 10px 20px;
+
+			background: $grey--lighter;
+			border: 0;
+			font-family: $font-pri--italic;
+		}
+	}
+
+	.btn--login {
+		padding: 35px;
+	}
+}

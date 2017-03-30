@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+	padding: 5px;
+}
+
+img {
+	line-height: 0;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearfix {
+	@include grid-container;
+}
