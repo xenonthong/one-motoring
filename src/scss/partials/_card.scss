@@ -1,0 +1,41 @@
+.card {
+	margin-bottom: 40px;
+
+	.category {
+		font-size: 14px;
+	}
+
+	@at-root {
+		#{&}__body {
+			padding: 25px;
+			background: $white;
+		}
+
+		#{&}__title {
+			margin: 15px 0 20px;
+
+			font-family: $font-pri--black;
+			font-size: 18px;
+			color: $grey;
+		}
+
+		#{&}__details {
+			@include grid-container;
+			color: $grey--lighter
+		}
+
+		#{&}__date {
+			font-size: 15px;
+		}
+
+		#{&}__action {
+			color: $purple;
+			font-size: 18px;
+			font-weight: 700;
+
+			.fa {
+				margin-left: 5px;
+			}
+		}
+	}
+}

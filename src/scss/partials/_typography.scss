@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Francois+One|Lato);
+@import url(https://fonts.googleapis.com/css?family=Francois+One|Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
 
 body {
 	font-family: $font-pri;
@@ -26,4 +26,29 @@ h3 {
 
 h4 {
 	font-size: 18px;
+}
+
+.text-pri {
+	font-family: $font-pri;
+}
+
+.text-sec {
+	font-family: $font-sec;
+}
+
+.category {
+	font-family: $font-pri;
+	text-transform: uppercase;
+
+	.fa {
+		margin-right: 5px;
+	}
+}
+
+.coe-prices-desc {
+	font-family: $font-pri;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: $grey;
 }

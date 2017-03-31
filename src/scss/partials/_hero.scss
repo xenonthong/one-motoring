@@ -1,0 +1,44 @@
+.hero {
+	height: 360px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.hero__speech {
+	position: relative;
+
+	height: 100%;
+	width: 35%;
+	padding: 50px 70px 30px;
+
+	background-color: rgba($yellow, .9);
+	color: $grey--dark;
+	
+	&:after {
+		position: absolute;
+		top: 40px;
+		right: -20px;
+		bottom: auto;
+		left: auto;
+
+		content: '';
+		border-style: solid;
+		border-width: 20px 0 20px 20px;
+		border-color: transparent rgba($yellow, .9);
+	}
+
+	.categories {
+		font-size: 15px;
+
+		.fa {
+			font-size: 14px;
+		}
+	}
+
+}
+
+.hero__speech-title {
+	margin: 20px 0 30px;
+	line-height: 1.3;
+}

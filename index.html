@@ -1,33 +1,187 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	<link rel="stylesheet" href="dist/app.css">
 </head>
 <body>
+	<!-- Header -->
 	<header class="header">
 		<div class="container">
 			<div class="clearfix">
 				<img class="left" src="img/primary_logo.jpg" alt="One Motoring">
 				<img class="right" src="img/secondary_logo.jpg" alt="Brought to you by Land Transport Authority">
 			</div>
-			<nav class="nav">
-				<ul class="nav__links">
-					<li class="nav__link"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+			<nav class="nav grid-collapsed">
+				<ul class="nav__links col-lg-8">
+					<li class="nav__link active"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li class="nav__link"><a href="javascript:void(0);">BUYING</a></li>
 					<li class="nav__link"><a href="javascript:void(0);">OWNING</a></li>
 					<li class="nav__link"><a href="javascript:void(0);">DRIVING</a></li>
 					<li class="nav__link"><a href="javascript:void(0);">SELLING/DE-REGISTERING</a></li>
 					<li class="nav__link"><a href="javascript:void(0);">eServices</a></li>
 				</ul>
-				<input class="nav__search" type="text" placeholder="Search">
-				<a class="btn btn--warning" href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
+				<div class="col-lg-4">
+					<a class="btn btn--small btn--warning right" href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
+
+					<label class="search-label right" for="search">
+						<input class="search-input" id="search" name="search" type="text" placeholder="Search">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</label>
+				</div>
 			</nav>
 		</div>
 	</header>
-	<div class="container">
-		<h1>Test</h1>
-	</div>
+	<!-- End header -->
+
+	<!-- Hero -->
+	<section class="hero" style="background-image: url(img/hero.jpg);">
+		<div class="hero__speech">
+			<p class="category">
+				<i class="fa fa-tag" aria-hidden="true"></i>featured news
+			</p>
+			<h1 class="hero__speech-title">
+				Smarter and More Energy-Efficient Street Lighting System by 2022
+			</h1>
+			<a href="javascript:void(0);" class="btn btn--medium">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+		</div>
+	</section>
+	<!-- End hero -->
+
+	<!-- Featured news -->
+	<section class="section section--secondary-news">
+		<div class="container">
+			<div class="clearfix grid-collapsed">
+				<div class="card col-lg-4">
+					<div class="card__body">
+						<div class="card__details">
+							<p class="category left">
+								<i class="fa fa-tag" aria-hidden="true"></i>news
+							</p>
+
+							<p class="card__date right">
+								26 Feb 2017
+							</p>
+						</div>
+						<h4 class="card__title">
+							Improved Safe Riding Programme for All Active Mobility Users
+						</h4>
+						<div class="clearfix">
+							<a href="javascript:void(0);" class="card__action">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="card col-lg-4">
+					<div class="card__body">
+						<div class="card__details">
+							<p class="category left">
+								<i class="fa fa-tag" aria-hidden="true"></i>news
+							</p>
+
+							<p class="card__date right">
+								7 Feb 2017
+							</p>
+						</div>
+						<h4 class="card__title">
+							Bidding of Car Registration Numbers for SLM Series
+						</h4>
+						<div class="clearfix">
+							<a href="javascript:void(0);" class="card__action">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="card col-lg-4">
+					<div class="card__body">
+						<div class="card__details">
+							<p class="category left">
+								<i class="fa fa-tag" aria-hidden="true"></i>news
+							</p>
+
+							<p class="card__date right">
+								26 Feb 2017
+							</p>
+						</div>
+						<h4 class="card__title">
+							More Payment Channels for Foreign Motorists 
+						</h4>
+						<div class="clearfix">
+							<a href="javascript:void(0);" class="card__action">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="align-center">
+				<a href="javascript:void(0);" class="btn btn--medium">See all news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</section>
+	<!-- End featured news -->
+
+	<!-- User login -->
+	<section class="section section--login-panel">
+		<div class="container">
+			<img class="col-lg-3" src="img/login_panel_screenshot.jpg" alt="Admin panel screenshot">
+			<div class="login-panel-desc col-lg-9">
+				<div class="grid-collapsed">
+					<div class="col-lg-7">
+						<h2 class="text-light text-pri">Login to your new dashboard</h2>
+						<h3 class="text-light text-pri"><i>All your motoring needs at a glance</i></h3>
+					</div>
+					<div class="col-lg-5 align-right">
+						<a class="btn btn--medium btn--alert" href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i> Login via SingPass</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End user login -->
+
+	<!-- Home updates -->
+	<section class="section section--home-updates">
+		<div class="container">
+			<div class="col-lg-4">
+				<h1>COE Prices</h1>
+				<p class="coe-prices-desc">
+					Results for FEBRUARY 2017<br>
+					1st Open Bidding Exercise
+				</p>
+				<table class="coe-price">
+					<tr>
+						<th>Cat A</th>
+						<td class="coe-price__type"><img src="img/coe_cat_a.png" alt="Cat A"></td>
+						<td class="coe-price__price">$48,401</td>
+					</tr>
+					<tr>
+						<th>Cat B</th>
+						<td class="coe-price__type"><img src="img/coe_cat_b.png" alt="Cat B"></td>
+						<td class="coe-price__price">$48,209</td>
+					</tr>
+					<tr>
+						<th>Cat C</th>
+						<td class="coe-price__type"><img src="img/coe_cat_c.png" alt="Cat C"></td>
+						<td class="coe-price__price">$48,901</td>
+					</tr>
+					<tr>
+						<th>Cat D</th>
+						<td class="coe-price__type"><img src="img/coe_cat_d.png" alt="Cat D"></td>
+						<td class="coe-price__price">$6,412</td>
+					</tr>
+					<tr>
+						<th>Cat E</th>
+						<td class="coe-price__type"><img src="img/coe_cat_e.png" alt="Cat E"></td>
+						<td class="coe-price__price">$48,556</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+	<!-- End home updates -->
+
+
+	<!-- Scripts -->
 	<script src="dist/app.js"></script>
 </body>
 </html>

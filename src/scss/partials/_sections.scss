@@ -1,0 +1,33 @@
+.section {
+	padding: 40px 0;
+}
+
+.section--secondary-news {
+	background-image: linear-gradient(-45deg, #fafafa 46%, #e4e4e4 49%, #e4e4e4 51%, #fafafa 55%);
+	background-size: 10px 10px;
+}
+
+.section--login-panel {
+	padding: 70px 0 0;
+
+	background: url(../img/login_panel_bg.png) #222349 no-repeat;
+	box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.4);
+	background-position: left bottom;
+
+	.login-panel-desc {
+		padding: 20px 0 0 40px;
+	}
+
+	a {
+		margin-top: 10px;
+	}
+}
+
+.section--home-updates {
+	padding: 45px 0 60px;
+
+	h1 {
+		color: $grey;
+		margin-bottom: 10px;
+	}
+}
