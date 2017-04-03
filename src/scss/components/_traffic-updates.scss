@@ -1,0 +1,42 @@
+.traffic-updates {
+	padding-left: 30px;
+
+	@at-root {
+		#{&}__search {
+			input {
+				width: calc(100% - 100px);
+				height: 45px;
+				margin-right: 12px;
+			}
+
+			.btn {
+				.fa {
+					font-size: 18px;
+				}
+			}
+		}
+
+		#{&}__table {
+			margin-top: 42px;
+		}
+
+		#{&}__type {
+			padding-right: 15px;
+		}
+
+		#{&}__title {
+			font-family: $font-pri;
+			font-weight: 700;
+		}
+
+		#{&}__time {
+			font-family: $font-pri;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		#{&}__desc {
+			margin-top: 3px;
+		}
+	}
+}

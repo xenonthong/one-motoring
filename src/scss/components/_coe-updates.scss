@@ -1,0 +1,53 @@
+.coe-updates {
+	padding-right: 60px;
+	border-right: solid 1px $table-border;
+
+	#{&}__indicator {
+		text-align: right;
+		padding: 15px 0 15px 5px;
+	}
+
+	@at-root {
+		#{&}__pricing-table {
+			width: 100%;
+		}
+
+		#{&}__desc {
+			font-family: $font-pri;
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: $grey;
+		}
+
+		#{&}__type {
+			width: 40%;
+			vertical-align: middle;
+		}
+
+		#{&}__price {
+			padding-right: 10px;
+
+			font-family: $font-pri;
+			font-weight: 300;
+			font-size: 28px;
+		}
+
+		#{&}__indicator {
+			font-size: 30px;
+			text-align: right;
+		}
+
+		#{&}__indicator--dec {
+			.fa {
+				color: #7cc23b;
+			}
+		}
+
+		#{&}__indicator--inc {
+			.fa {
+				color: #da0030;
+			}
+		}
+	}
+}

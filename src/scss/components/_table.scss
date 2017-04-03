@@ -1,0 +1,25 @@
+table {
+	margin-top: 15px;
+}
+
+th,
+td {
+	text-align: left;
+	padding: 15px 0;
+	vertical-align: top;
+}
+
+tr {
+	border-bottom: solid 1px $table-border;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+th {
+	font-family: $font-pri;
+	font-weight: 700;
+	font-size: 18px;
+	vertical-align: middle;
+}

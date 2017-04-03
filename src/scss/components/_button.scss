@@ -1,0 +1,53 @@
+.btn {
+	$shadow-color: $purple;
+
+	padding: 12px 30px;
+	display: inline-block;
+
+	text-align: center;
+	color: $white;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	background-color: $shadow-color;
+	box-shadow: 0 3px darken($shadow-color, 10);
+	transition: transform .1s,
+				box-shadow .1s;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:active {
+		box-shadow: 0 1px darken($shadow-color, 10);
+		transform: translateY(2px);
+	}
+
+	@at-root {
+		#{&}--warning {
+			$shadow-color: $orange;
+
+			background: $orange;
+			box-shadow: 0 3px darken($shadow-color, 10);
+
+			&:active {
+				box-shadow: 0 1px darken($shadow-color, 10);
+			}
+		}
+
+		#{&}--alert {
+			$shadow-color: $red;
+
+			background: $red;
+			box-shadow: 0 3px darken($shadow-color, 10);
+
+			&:active {
+				box-shadow: 0 1px darken($shadow-color, 10);
+			}
+		}
+	}
+
+	.fa {
+		padding: 0 5px;
+	}
+}

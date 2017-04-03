@@ -10,10 +10,17 @@
 
 @import "partials/general";
 @import "partials/typography";
-@import "partials/header";
-@import "partials/button";
-@import "partials/search";
-@import "partials/hero";
-@import "partials/card";
 @import "partials/sections";
-@import "partials/table";
+
+// Components
+@import "components/coe-updates";
+@import "components/traffic-updates";
+@import "components/table";
+@import "components/form";
+@import "components/header";
+@import "components/nav";
+@import "components/button";
+@import "components/search";
+@import "components/hero";
+@import "components/card";
+@import "components/footer";

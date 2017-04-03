@@ -1,0 +1,36 @@
+.header {
+	.search-label {
+		position: relative;
+
+		margin-right: 30px;
+		padding: 10px 17px 10px 20px;
+		width: calc(100% - 160px);
+		height: 40px;
+		
+		background: $grey--lightest;
+
+		.fa {
+			position: absolute;
+			top: 11px;
+			right: 10px;
+		}
+	}
+
+	.search-input {
+		width: calc(100% - 10px); // Reduce 10px because of the search icon.
+		padding: 0;
+
+		background: transparent;
+		border: 0;
+		font-size: 16px;
+		font-style: italic;
+		color: $grey--light;
+		outline: none;
+
+		&:placeholder {
+			color: $grey--light;
+		}
+	}
+}
+
+

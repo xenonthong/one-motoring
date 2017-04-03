@@ -2,11 +2,25 @@
 	padding: 40px 0;
 }
 
+.section--no-pad {
+	padding: 0;
+}
+
+.section__banner-header {
+	padding: 30px 0 75px;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+// Secondary news
 .section--secondary-news {
 	background-image: linear-gradient(-45deg, #fafafa 46%, #e4e4e4 49%, #e4e4e4 51%, #fafafa 55%);
 	background-size: 10px 10px;
 }
 
+// Login
 .section--login-panel {
 	padding: 70px 0 0;
 
@@ -23,11 +37,36 @@
 	}
 }
 
+
+// Home updates
 .section--home-updates {
 	padding: 45px 0 60px;
 
 	h1 {
 		color: $grey;
 		margin-bottom: 10px;
+	}
+}
+
+// Traffic cameras
+.featured-cameras {
+	position: relative;
+	z-index: 1;
+
+	padding-bottom: 145px;
+
+	background: url('img/featured_cameras_bg.jpg') no-repeat center center;
+	background-size: cover;
+
+	.card {
+		margin-top: -40px;
+	}
+}
+
+.camera-feed {
+	margin-top: 30px;
+
+	img {
+		width: 100%;
 	}
 }
