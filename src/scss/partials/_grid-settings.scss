@@ -1,12 +1,13 @@
 // Tablet to desktop
+
+$sm-grid: (
+	columns: $columns-sm,
+	gutter: 30px,
+	media: 320px
+);
+
 $lg-grid: (
-  columns: 12,
+  columns: $columns-lg,
   gutter: 30px,
   media: 768px
 );
-
-$sm-grid: (
-	columns: 4,
-	gutter: 30px,
-	media: 320px
-)

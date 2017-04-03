@@ -1,4 +1,12 @@
-.header {
+.header-desktop {
+	position: relative;
+
+	padding: 35px 0 0;
+
 	background: $white;
-	padding: 35px 0px;
+	display: none;
+
+	@include grid-media($lg-grid) {
+		display: block;
+	}
 }

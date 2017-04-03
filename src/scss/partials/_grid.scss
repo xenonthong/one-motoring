@@ -3,24 +3,28 @@
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 0 20px;
+
+	@include grid-media($sm-grid) {
+		padding: 0 15px;
+	}
 }
 
 .grid-collapsed {
 	@include grid-collapse($lg-grid);
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through $columns-sm {
+	.col-sm-#{$i} {
+		@include grid-media($sm-grid) {
+			@include grid-column($i);
+		}
+	}
+}
+
+@for $i from 1 through $columns-lg {
 	.col-lg-#{$i} {
 		@include grid-media($lg-grid) {
 			@include grid-column($i);
 		}
 	}
 }
-
-// @for $i from 1 through 4 {
-// 	.col-sm-#{$i} {
-// 		@include grid-media($sm-grid) {
-// 			@include grid-column($i);
-// 		}
-// 	}
-// }

@@ -1,0 +1,140 @@
+// Basic navigation
+.nav {
+	padding-top: 25px;
+	@include grid-container;
+
+	.active {
+		a {
+		 	color: $orange;
+		}
+	}
+
+	.btn {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	@at-root {
+		#{&}__links {
+			float: left;
+			padding-top: 11px;
+
+			font-family: $font-pri--black;
+		}
+
+		#{&}__link {
+			float: left;
+			margin-right: 20px;
+			padding-bottom: 35px;
+
+			color: $grey;
+
+			&:hover {
+				.mega-menu {
+					display: block;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.fa {
+				font-size: 18px;
+			}
+
+			a {
+				color: $grey;
+			}
+		}
+
+		#{&}__link--special {
+			padding-left: 20px;
+			padding-bottom: 0;
+
+			border-left: solid 1px $grey;
+
+			a {
+				color: $purple;
+			}
+		}
+	}
+
+	.btn--login {
+		padding: 35px;
+	}
+}
+
+
+// Here comes the mega menu
+.mega-menu {
+	position: absolute;
+	bottom: -340px;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+	height: 340px;
+	padding: 30px 0;
+
+	display: none;
+	background: rgba(#1d212d, .95);
+	color: $white;
+
+	li {
+		margin-bottom: 10px;
+
+		&:hover {
+			cursor: pointer;
+			color: $yellow;
+			font-weight: 700;
+
+			> .mega-menu__items {
+				display: block;
+			}
+		}
+
+		a {
+			color: $white;
+
+			&:hover {
+				color: $yellow;
+				font-weight: 700;
+			}
+		}
+	}
+
+	h2 {
+		margin-bottom: 10px;
+	}
+
+	@at-root {
+		#{&}__category {
+			color: $orange;
+			@include grid-column(2);
+		}
+
+		#{&}__items {
+			font-family: $font-pri;
+		}
+
+		#{&}__items--l1 {
+			position: relative;
+			width: 300px;
+
+			&:hover {
+				> .mega-menu__items {
+					display: block;
+				}
+			}
+		}
+
+		#{&}__items--l2 {
+			position: absolute;
+			right: -300px;
+			top: 0;
+
+			display: none;
+		}
+	}
+}

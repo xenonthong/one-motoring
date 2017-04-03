@@ -59,3 +59,22 @@ i {
 .absolute {
 	position: absolute;
 }
+
+.logo-pri {
+	float: left;
+
+	img {
+		@include grid-media($sm-grid) {
+			max-width: 150px;
+		}
+	}
+}
+
+.logo-sec {
+	float: right;
+	display: none;
+	
+	@include grid-media($lg-grid) {
+		display: inline;
+	}
+}
