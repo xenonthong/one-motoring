@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -82,13 +82,63 @@ __webpack_require__(2);
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-window.$ = __webpack_require__(3);
+window.$ = __webpack_require__(4);
 
 // Require our js files.
-__webpack_require__(15);
+__webpack_require__(3);
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports) {
+
+var MobileHeader = {
+	ToggleMenu: function ToggleMenu() {
+		var ham = $('.hamburger');
+		var menu = $('.header-mobile .mega-menu');
+
+		ham.click(function () {
+
+			var opened = menu.hasClass('is-opened');
+
+			if (opened) {
+				menu.removeClass('is-opened');
+				return;
+			}
+
+			menu.addClass('is-opened');
+		});
+	},
+	ToggleMenuItems: function ToggleMenuItems() {
+		var menuItems = $('.header-mobile li');
+		var collapsedArrow = 'fa-chevron-right';
+		var expandedArrow = 'fa-chevron-down';
+
+		menuItems.click(function (e) {
+			e.stopPropagation();
+
+			item = $(this);
+
+			if (item.hasClass('is-opened')) {
+				item.removeClass('is-opened');
+
+				item.find('> .fa').removeClass(expandedArrow).addClass(collapsedArrow);
+				return;
+			}
+
+			item.addClass('is-opened');
+			item.find('> .fa').removeClass(collapsedArrow).addClass(expandedArrow);
+		});
+	},
+	Init: function Init() {
+		this.ToggleMenu();
+		this.ToggleMenuItems();
+	}
+};
+
+MobileHeader.Init();
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10348,50 +10398,12 @@ return jQuery;
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
-
-/***/ }),
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */
-/***/ (function(module, exports) {
-
-var MobileHeader = {
-	ToggleMenu: function ToggleMenu() {
-		var ham = $('.hamburger');
-		var menu = $('.header-mobile .mega-menu');
-
-		ham.click(function () {
-
-			var opened = menu.hasClass('is-opened');
-
-			if (opened) {
-				menu.removeClass('is-opened');
-				return;
-			}
-
-			menu.addClass('is-opened');
-		});
-	},
-	init: function init() {
-		this.ToggleMenu();
-	}
-};
-
-MobileHeader.init();
 
 /***/ })
 /******/ ]);

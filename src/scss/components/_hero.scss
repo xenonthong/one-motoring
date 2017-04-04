@@ -9,23 +9,29 @@
 	position: relative;
 
 	height: 100%;
-	width: 35%;
+	
 	padding: 50px 70px 30px;
-
+	width: 100%;
 	background-color: rgba($yellow, .9);
 	color: $grey--dark;
-	
-	&:after {
-		position: absolute;
-		top: 40px;
-		right: -20px;
-		bottom: auto;
-		left: auto;
 
-		content: '';
-		border-style: solid;
-		border-width: 20px 0 20px 20px;
-		border-color: transparent rgba($yellow, .9);
+	@include grid-media($lg-grid){
+		width: 35%;
+	}
+
+	&:after {
+		@include grid-media($lg-grid){
+			position: absolute;
+			top: 40px;
+			right: -20px;
+			bottom: auto;
+			left: auto;
+
+			content: '';
+			border-style: solid;
+			border-width: 20px 0 20px 20px;
+			border-color: transparent rgba($yellow, .9);
+		}
 	}
 
 	.categories {

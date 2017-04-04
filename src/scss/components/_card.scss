@@ -47,3 +47,14 @@
 		}
 	}
 }
+
+.card-collection {
+	overflow-x:scroll;
+
+	// .card {
+		// 	@include grid-media($sm-grid) {
+		// 		width: 230px;
+		// 		float: left;
+		// 	}
+		// }
+}

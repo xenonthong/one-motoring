@@ -13,13 +13,35 @@ let MobileHeader = {
 			}
 
 			menu.addClass('is-opened');
-
 		});
 	},
 
-	init() {
+	ToggleMenuItems() {
+		let menuItems = $('.header-mobile li');
+		let collapsedArrow = 'fa-chevron-right';
+		let expandedArrow = 'fa-chevron-down';
+
+		menuItems.click(function(e) {
+			e.stopPropagation();
+
+			item = $(this);
+
+			if (item.hasClass('is-opened')) {
+				item.removeClass('is-opened');
+
+				item.find('> .fa').removeClass(expandedArrow).addClass(collapsedArrow);
+				return;
+			}
+
+			item.addClass('is-opened');
+			item.find('> .fa').removeClass(collapsedArrow).addClass(expandedArrow);
+		});
+	},
+
+	Init() {
 		this.ToggleMenu();
+		this.ToggleMenuItems();
 	}
 }
 
-MobileHeader.init();
+MobileHeader.Init();
