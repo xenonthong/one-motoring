@@ -1,12 +1,40 @@
 .header-desktop {
+	@extend .show-on-lg;
+
 	position: relative;
 
 	padding: 35px 0 0;
 
 	background: $white;
-	display: none;
 
-	@include grid-media($lg-grid) {
-		display: block;
+	.mega-menu {
+		display: none;
+	}
+}
+
+.header-mobile {
+	@extend .show-on-md-down;
+
+	position: relative;
+
+	@at-root {
+		#{&}__search {
+			padding-right: 20px;	
+		}
+
+		#{&}__search,
+		hamburger {
+			font-size: 18px;
+		}
+
+		#{&}__utilities {
+			position: relative;
+			z-index: 200;
+
+			padding-top: 15px;
+			padding-bottom: 15px;
+
+			background: $white;
+		}
 	}
 }

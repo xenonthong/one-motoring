@@ -1,6 +1,12 @@
 // Grid columns
 $columns-lg: 12; // Desktop
+$columns-md: 8; // Tablet
 $columns-sm: 4; // Mobile
+
+// Breakpoints
+$bp-sm: 320px;
+$bp-md: 768px;
+$bp-lg: 1024px;
 
 // Project grey
 $grey--darker: #222222;

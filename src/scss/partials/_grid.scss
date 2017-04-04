@@ -10,12 +10,20 @@
 }
 
 .grid-collapsed {
-	@include grid-collapse($lg-grid);
+	@include grid-collapse($md-grid);
 }
 
 @for $i from 1 through $columns-sm {
 	.col-sm-#{$i} {
 		@include grid-media($sm-grid) {
+			@include grid-column($i);
+		}
+	}
+}
+
+@for $i from 1 through $columns-lg {
+	.col-md-#{$i} {
+		@include grid-media($md-grid) {
 			@include grid-column($i);
 		}
 	}

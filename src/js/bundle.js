@@ -1,8 +1,4 @@
-window.Vue = require('vue');
+window.$ = require('jquery');
 
-// Vue components
-require('./vue-components/HeaderNav');
-
-const app = new Vue({
-	'el': '#app'
-});
+// Require our js files.
+require('./mobileHeader');
