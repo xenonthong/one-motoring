@@ -1,11 +1,15 @@
 .header-desktop {
-	@extend .show-on-lg;
 
 	position: relative;
 
 	padding: 35px 0 0;
+	display: none;
 
 	background: $white;
+
+	@include grid-media($lg-grid) {
+		display: block;
+	};
 
 	.mega-menu {
 		display: none;
@@ -13,9 +17,13 @@
 }
 
 .header-mobile {
-	@extend .show-on-md-down;
-
 	position: relative;
+
+	display: block;
+
+	@include grid-media($lg-grid) {
+		display: none;
+	};
 
 	@at-root {
 		#{&}__search {

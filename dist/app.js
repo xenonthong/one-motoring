@@ -86,13 +86,14 @@ window.$ = __webpack_require__(4);
 
 // Require our js files.
 __webpack_require__(3);
+__webpack_require__(16);
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
 var MobileHeader = {
-	ToggleMenu: function ToggleMenu() {
+	toggleMenu: function toggleMenu() {
 		var ham = $('.hamburger');
 		var menu = $('.header-mobile .mega-menu');
 
@@ -108,7 +109,7 @@ var MobileHeader = {
 			menu.addClass('is-opened');
 		});
 	},
-	ToggleMenuItems: function ToggleMenuItems() {
+	toggleMenuItems: function toggleMenuItems() {
 		var menuItems = $('.header-mobile li');
 		var collapsedArrow = 'fa-chevron-right';
 		var expandedArrow = 'fa-chevron-down';
@@ -129,13 +130,13 @@ var MobileHeader = {
 			item.find('> .fa').removeClass(collapsedArrow).addClass(expandedArrow);
 		});
 	},
-	Init: function Init() {
-		this.ToggleMenu();
-		this.ToggleMenuItems();
+	init: function init() {
+		this.toggleMenu();
+		this.toggleMenuItems();
 	}
 };
 
-MobileHeader.Init();
+MobileHeader.init();
 
 /***/ }),
 /* 4 */
@@ -10404,6 +10405,56 @@ return jQuery;
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
+
+/***/ }),
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */
+/***/ (function(module, exports) {
+
+var sectionAccordion = {
+	toggleAccordion: function toggleAccordion() {
+		var that = this;
+
+		$('.section__accordion-header').click(function () {
+
+			var accordion = $(this).parent('.section__accordion');
+			var header = $(this);
+
+			if (that.checkIfLink(header)) {
+				return;
+			}
+
+			if (accordion.hasClass('is-opened')) {
+				that.close(accordion);
+			} else {
+				that.open(accordion);
+			}
+		});
+	},
+	open: function open(accordion) {
+		accordion.addClass('is-opened');
+	},
+	close: function close(accordion) {
+		accordion.removeClass('is-opened');
+	},
+	checkIfLink: function checkIfLink(header) {
+		return header.is('a');
+	},
+	init: function init() {
+		this.toggleAccordion();
+	}
+};
+
+sectionAccordion.init();
 
 /***/ })
 /******/ ]);

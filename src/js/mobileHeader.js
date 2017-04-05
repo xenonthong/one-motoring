@@ -1,5 +1,5 @@
 let MobileHeader = {
-	ToggleMenu() {
+	toggleMenu() {
 		let ham = $('.hamburger');
 		let menu = $('.header-mobile .mega-menu');
 
@@ -16,7 +16,7 @@ let MobileHeader = {
 		});
 	},
 
-	ToggleMenuItems() {
+	toggleMenuItems() {
 		let menuItems = $('.header-mobile li');
 		let collapsedArrow = 'fa-chevron-right';
 		let expandedArrow = 'fa-chevron-down';
@@ -38,10 +38,10 @@ let MobileHeader = {
 		});
 	},
 
-	Init() {
-		this.ToggleMenu();
-		this.ToggleMenuItems();
+	init() {
+		this.toggleMenu();
+		this.toggleMenuItems();
 	}
 }
 
-MobileHeader.Init();
+MobileHeader.init();

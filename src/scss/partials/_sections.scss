@@ -5,10 +5,18 @@
 		padding: 40px 0;
 	}
 
+	#{&}__accordion-header {
+		margin: 0;
+	}
+
 	@at-root {
+		#{&}--no-pad {
+			padding: 0;
+		}
+
 		#{&}__title {
 			font-size: 24px;
-			font-family: $font-pri;
+			font-family: $font-sec;
 			color: $white;
 
 			@include grid-media($lg-grid) {
@@ -16,16 +24,78 @@
 			}
 		}
 
-		#{&}--no-pad {
-			padding: 0;
+		#{&}__sub-title {
+			font-size: 16px;
+			font-family: $font-pri;
+			color: $white;
+
+			@include grid-media($lg-grid) {
+				font-size: 20px;
+			}
 		}
 
-		#{&}__banner-header {
-			padding: 30px 0 75px;
+		#{&}__accordion {
+			&.is-opened {
+				.section__accordion-body {
+					max-height: 2000px; // Just a random height that we'll never exceed.
+				}
 
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
+				.section__accordion-header:after {
+					transform: rotate(90deg);
+				}
+			}
+		}
+
+		#{&}__accordion-header {
+			position: relative;
+
+			display: block;
+			padding: 30px 0;
+
+			color: #ffffff;
+			font-size: 24px;
+			font-family: $font-sec;
+
+			&:after {
+				content: '\f054';
+
+				position: absolute;
+				right: 20px;
+				top: 0;
+				bottom: 0;
+				height: 31px;
+
+				margin: auto;
+
+				font-family: $font-fa;
+				transition: transform .2s ease-in-out;
+			}
+
+			@include grid-media($lg-grid) {
+				position: static;
+				font-size: 30px;
+			}
+		}
+
+		#{&}__accordion-body {
+			display: block;
+			max-height: 0;
+
+			overflow: hidden;
+			transition: max-height .5s ease-in-out;
+
+			@include grid-media($md-grid) {
+				max-height: none;
+				overflow: visible;
+			}
+		}
+
+		#{&}__accordion-content {
+			padding: 25px 15px 40px;
+
+			@include grid-media($lg-grid) {
+				padding: 0;
+			}
 		}
 	}
 }
@@ -38,6 +108,8 @@
 
 // Login
 .section--login-panel {
+	padding: 0;
+
 	background: url(../img/login_panel_bg.png) #222349 no-repeat;
 	box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.4);
 	background-position: left bottom;
@@ -52,6 +124,10 @@
 		}
 	}
 
+	.section__accordion-header {
+		margin-top: 0px;
+	}
+
 	a {
 		margin-top: 10px;
 	}
@@ -60,7 +136,42 @@
 
 // Home updates
 .section--home-updates {
-	padding: 45px 0 60px;
+	padding: 0;
+
+	.traffic-updates {
+		@include grid-media($md-grid) {
+			padding-left: 30px;
+		}
+
+		.section__accordion-header {
+			background: #fecd20;
+
+			@include grid-media($md-grid) {
+				background: none;
+			}
+		}
+	}
+
+	.coe-updates {
+		@include grid-media($md-grid) {
+			padding-right: 60px;
+		}
+
+		.section__accordion-header {
+			background: #7a7b92;
+			color: $white;
+
+			@include grid-media($md-grid) {
+				background: none;
+				color: $grey;
+			}
+		}
+	}
+	
+
+	@include grid-media($md-grid) {
+		padding: 45px 0 60px;
+	}
 
 	h1 {
 		color: $grey;
@@ -74,17 +185,44 @@
 }
 
 // Traffic cameras
+.section--traffic-cameras {
+	padding: 0;
+
+	.section__accordion-header {
+		padding: 30px 0 75px;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		&:after {
+			top: 30px;
+			bottom: auto;
+		}
+
+		@include grid-media($lg-grid) {
+			padding: 30px 0 75px;
+		}
+	}
+
+	.section__accordion-body {
+		position: relative;
+		z-index: 100;
+	}
+
+}
+
 .featured-cameras {
 	position: relative;
 	z-index: 1;
 
 	padding-bottom: 145px;
 
-	background: url('img/featured_cameras_bg.jpg') no-repeat center center;
-	background-size: cover;
-
 	.card {
-		margin-top: -40px;
+
+		@include grid-media($lg-grid) {
+			margin-top: -40px;
+		}
 	}
 }
 

@@ -1,5 +1,4 @@
 .coe-updates {
-	padding-right: 60px;
 	border-right: solid 1px $table-border;
 
 	#{&}__indicator {
@@ -8,10 +7,6 @@
 	}
 
 	@at-root {
-		#{&}__pricing-table {
-			width: 100%;
-		}
-
 		#{&}__desc {
 			font-family: $font-pri;
 			font-size: 14px;

@@ -1,22 +1,29 @@
 .hero {
-	height: 360px;
+	
+	height: 245px;
+
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+
+	@include grid-media($lg-grid){
+		height: 360px;
+	}
 }
 
 .hero__speech {
 	position: relative;
 
 	height: 100%;
-	
-	padding: 50px 70px 30px;
 	width: 100%;
+	padding: 25px 15px;
+
 	background-color: rgba($yellow, .9);
 	color: $grey--dark;
 
 	@include grid-media($lg-grid){
 		width: 35%;
+		padding: 50px 70px 30px;
 	}
 
 	&:after {
@@ -45,6 +52,12 @@
 }
 
 .hero__speech-title {
+	font-size: 22px;
+
+	@include grid-media($lg-grid) {
+		font-size: 30px;
+	}
+
 	margin: 20px 0 30px;
 	line-height: 1.3;
 }

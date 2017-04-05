@@ -44,6 +44,12 @@ i {
 	text-align: center;
 }
 
+.align-center-md-down {
+	@media screen and (max-width: $bp-md) {
+		text-align: center;
+	}
+}
+
 .align-right {
 	text-align: right;
 }
@@ -66,47 +72,14 @@ i {
 	position: absolute;
 }
 
-// Visibility
-.show-on-sm {
-	display: none !important;
-
-	@media screen and (max-width: $bp-sm) {
-		display: block !important;
-	}
+// Background
+.bg-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-.show-on-md {
-	display: none !important;
-
-	@media screen and (min-width: $bp-md) {
-		display: block !important;
-	}
-
-	@media screen and (min-width: $bp-lg) {
-		display: none !important;
-	}
-}
-
-.show-on-lg {
-	display: none !important;
-
-	@media screen and (min-width: $bp-lg) {
-		display: block !important;
-	}
-}
-
-.show-on-md-down {
-	display: block !important;
-
-	@media screen and (min-width: $bp-md) {
-		display: block !important;
-	}
-
-	@media screen and (min-width: $bp-lg) {
-		display: none !important;
-	}
-}
-
+// Others
 .logo-pri {
 	float: left;
 
