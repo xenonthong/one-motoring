@@ -6,7 +6,7 @@
 	background-position: center;
 	background-size: cover;
 
-	@include grid-media($lg-grid){
+	@include grid-media($md-grid){
 		height: 360px;
 	}
 }
@@ -21,13 +21,16 @@
 	background-color: rgba($yellow, .9);
 	color: $grey--dark;
 
-	@include grid-media($lg-grid){
+	@include grid-media($md-grid) {
 		width: 35%;
+	}
+
+	@include grid-media($lg-grid){
 		padding: 50px 70px 30px;
 	}
 
 	&:after {
-		@include grid-media($lg-grid){
+		@include grid-media($md-grid){
 			position: absolute;
 			top: 40px;
 			right: -20px;
@@ -54,7 +57,7 @@
 .hero__speech-title {
 	font-size: 22px;
 
-	@include grid-media($lg-grid) {
+	@include grid-media($md-grid) {
 		font-size: 30px;
 	}
 

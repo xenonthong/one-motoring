@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -82,11 +82,11 @@ __webpack_require__(2);
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-window.$ = __webpack_require__(4);
+window.$ = __webpack_require__(5);
 
 // Require our js files.
 __webpack_require__(3);
-__webpack_require__(16);
+__webpack_require__(4);
 
 /***/ }),
 /* 3 */
@@ -140,6 +140,46 @@ MobileHeader.init();
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+var sectionAccordion = {
+	toggleAccordion: function toggleAccordion() {
+		var that = this;
+
+		$('.section__accordion-header').click(function () {
+
+			var accordion = $(this).parent('.section__accordion');
+			var header = $(this);
+
+			if (that.checkIfLink(header)) {
+				return;
+			}
+
+			if (accordion.hasClass('is-opened')) {
+				that.close(accordion);
+			} else {
+				that.open(accordion);
+			}
+		});
+	},
+	open: function open(accordion) {
+		accordion.addClass('is-opened');
+	},
+	close: function close(accordion) {
+		accordion.removeClass('is-opened');
+	},
+	checkIfLink: function checkIfLink(header) {
+		return header.is('a');
+	},
+	init: function init() {
+		this.toggleAccordion();
+	}
+};
+
+sectionAccordion.init();
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10399,62 +10439,12 @@ return jQuery;
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
-
-/***/ }),
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
-/***/ (function(module, exports) {
-
-var sectionAccordion = {
-	toggleAccordion: function toggleAccordion() {
-		var that = this;
-
-		$('.section__accordion-header').click(function () {
-
-			var accordion = $(this).parent('.section__accordion');
-			var header = $(this);
-
-			if (that.checkIfLink(header)) {
-				return;
-			}
-
-			if (accordion.hasClass('is-opened')) {
-				that.close(accordion);
-			} else {
-				that.open(accordion);
-			}
-		});
-	},
-	open: function open(accordion) {
-		accordion.addClass('is-opened');
-	},
-	close: function close(accordion) {
-		accordion.removeClass('is-opened');
-	},
-	checkIfLink: function checkIfLink(header) {
-		return header.is('a');
-	},
-	init: function init() {
-		this.toggleAccordion();
-	}
-};
-
-sectionAccordion.init();
 
 /***/ })
 /******/ ]);

@@ -84,8 +84,11 @@ i {
 	float: left;
 
 	img {
-		@media screen and (max-width: $bp-md) {
-			max-width: 150px;
+		max-width: 150px;
+		height: 45px;
+
+		@include grid-media($lg-grid) {
+			max-width: none;
 		}
 	}
 }
@@ -94,7 +97,7 @@ i {
 	float: right;
 	display: none;
 	
-	@include grid-media($md-grid) {
+	@include grid-media($lg-grid) {
 		display: inline;
 	}
 }
