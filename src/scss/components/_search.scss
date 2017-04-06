@@ -1,36 +1,41 @@
-.header-desktop {
-	.search-label {
-		position: relative;
+.menu-search {
+	@include grid-container();
 
-		margin-right: 30px;
-		padding: 10px 17px 10px 20px;
-		width: calc(100% - 160px);
+	width: 100%;
+
+	@include grid-media($lg-grid) {
+		width: calc(100% - 125px);
+	}
+
+	#{&}__input,
+	#{&}__btn {
 		height: 40px;
-		
-		background: $grey--lightest;
+		float: left;
+		font-size: 16px;
+	}
 
-		.fa {
-			position: absolute;
-			top: 11px;
-			right: 10px;
+	#{&}__input {
+		width: calc(100% - 45px);
+
+		@include grid-media($lg-grid) {
+			width: calc(100% - 60px);
 		}
 	}
 
-	.search-input {
-		width: calc(100% - 10px); // Reduce 10px because of the search icon.
-		padding: 0;
-
-		background: transparent;
+	#{&}__btn {
+		padding: 0 15px;
 		border: 0;
-		font-size: 16px;
-		font-style: italic;
-		color: $grey--light;
-		outline: none;
+		outline: 0;
 
-		&:placeholder {
-			color: $grey--light;
+		background: darken($grey--lightest, 5);
+		color: $purple;
+
+		@include grid-media($lg-grid) {
+			color: $grey;
+		}
+
+		&:hover {
+			cursor: pointer;
 		}
 	}
 }
-
-

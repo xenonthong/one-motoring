@@ -3731,13 +3731,6 @@ h4 {
   transition: max-height .5s ease-in-out;
 }
 
-@media only screen and (min-width: 768px) {
-  .accordion .accordion__body {
-    max-height: none;
-    overflow: visible;
-  }
-}
-
 .accordion .accordion__content {
   padding: 15px;
 }
@@ -3910,7 +3903,7 @@ textarea {
 
 .nav__link {
   float: left;
-  margin-right: 15px;
+  margin-right: 13px;
   padding-bottom: 35px;
   color: #444444;
 }
@@ -4064,7 +4057,7 @@ textarea {
     border: 0;
     border-left: solid 1px #444444;
     padding-top: 0;
-    padding-left: 20px;
+    padding-left: 16px;
     padding-bottom: 0;
   }
   .special-menu-item a {
@@ -4120,34 +4113,55 @@ textarea {
   padding: 0 5px;
 }
 
-.header-desktop .search-label {
-  position: relative;
-  margin-right: 30px;
-  padding: 10px 17px 10px 20px;
-  width: calc(100% - 160px);
+.menu-search {
+  width: 100%;
+}
+
+.menu-search::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu-search {
+    width: calc(100% - 125px);
+  }
+}
+
+.menu-search .menu-search__input,
+.menu-search .menu-search__btn {
   height: 40px;
-  background: #e9edf5;
-}
-
-.header-desktop .search-label .fa {
-  position: absolute;
-  top: 11px;
-  right: 10px;
-}
-
-.header-desktop .search-input {
-  width: calc(100% - 10px);
-  padding: 0;
-  background: transparent;
-  border: 0;
+  float: left;
   font-size: 16px;
-  font-style: italic;
-  color: #555555;
-  outline: none;
 }
 
-.header-desktop .search-input:placeholder {
-  color: #555555;
+.menu-search .menu-search__input {
+  width: calc(100% - 45px);
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu-search .menu-search__input {
+    width: calc(100% - 60px);
+  }
+}
+
+.menu-search .menu-search__btn {
+  padding: 0 15px;
+  border: 0;
+  outline: 0;
+  background: #d7dfed;
+  color: #3f4fa0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu-search .menu-search__btn {
+    color: #444444;
+  }
+}
+
+.menu-search .menu-search__btn:hover {
+  cursor: pointer;
 }
 
 .hero {
@@ -4322,6 +4336,13 @@ textarea {
   top: 0;
   bottom: 0;
   height: 31px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section .accordion__body {
+    max-height: none;
+    overflow: visible;
+  }
 }
 
 .section .accordion__content {

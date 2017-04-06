@@ -92,11 +92,11 @@
 					</ul>
 					<div class="col-lg-4">
 						<a class="btn btn--warning right" href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
-
-						<label class="search-label right" for="search">
-							<input class="search-input" id="search" name="search" type="text" placeholder="Search">
-							<i class="fa fa-search" aria-hidden="true"></i>
-						</label>
+						
+						<form class="menu-search left" action="POST">
+							<input class="menu-search__input" id="search" name="search" type="text" placeholder="Search">
+							<button class="menu-search__btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
 					</div>
 				</nav>
 			</div>
@@ -170,9 +170,12 @@
 				</div>
 			</nav>
 			<div class="off-canvas__content off-canvas__search">
-				<label class="search-label right" for="search">
-					test
-				</label>
+				<div class="container">
+					<form class="menu-search clearfix" action="POST">
+						<input class="menu-search__input" id="search" name="search" type="text" placeholder="Search">
+						<button class="menu-search__btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</form>
+				</div>
 			</div>
 		</header>
 		<!-- End mobile header-->

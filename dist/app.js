@@ -125,11 +125,40 @@ sectionAccordion.init();
 window.$ = __webpack_require__(5);
 
 // Require our js files.
-__webpack_require__(10);
+__webpack_require__(4);
 __webpack_require__(2);
 
 /***/ }),
-/* 4 */,
+/* 4 */
+/***/ (function(module, exports) {
+
+var offcanvas = {
+	toggleOffCanvasItem: function toggleOffCanvasItem() {
+		var controller = $('.off-canvas__control');
+		var itemClassPrefix = '.off-canvas__';
+
+		controller.click(function () {
+
+			var itemClassName = itemClassPrefix + $(this).data('controls');
+			var item = $(itemClassName);
+
+			if (item.hasClass('is-opened')) {
+				item.removeClass('is-opened');
+				return;
+			}
+
+			$('.off-canvas__content').removeClass('is-opened');
+			item.addClass('is-opened');
+		});
+	},
+	init: function init() {
+		this.toggleOffCanvasItem();
+	}
+};
+
+offcanvas.init();
+
+/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10396,38 +10425,6 @@ return jQuery;
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
-
-/***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
-/***/ (function(module, exports) {
-
-var offcanvas = {
-	toggleOffCanvasItem: function toggleOffCanvasItem() {
-		var controller = $('.off-canvas__control');
-		var itemClassPrefix = '.off-canvas__';
-
-		controller.click(function () {
-
-			var itemClassName = itemClassPrefix + $(this).data('controls');
-			var item = $(itemClassName);
-
-			if (item.hasClass('is-opened')) {
-				item.removeClass('is-opened');
-				return;
-			}
-
-			item.addClass('is-opened');
-		});
-	},
-	init: function init() {
-		this.toggleOffCanvasItem();
-	}
-};
-
-offcanvas.init();
 
 /***/ })
 /******/ ]);

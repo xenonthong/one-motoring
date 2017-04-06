@@ -40,11 +40,6 @@
 
 		overflow: hidden;
 		transition: max-height .5s ease-in-out;
-
-		@include grid-media($md-grid) {
-			max-height: none;
-			overflow: visible;
-		}
 	}
 
 	#{&}__content {

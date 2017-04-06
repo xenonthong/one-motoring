@@ -12,7 +12,8 @@ let offcanvas = {
 				item.removeClass('is-opened');
 				return;
 			}
-
+			
+			$('.off-canvas__content').removeClass('is-opened');
 			item.addClass('is-opened');
 		});
 	},

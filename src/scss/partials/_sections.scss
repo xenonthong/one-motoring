@@ -20,6 +20,13 @@
 		}
 	}
 
+	.accordion__body {
+		@include grid-media($md-grid) {
+			max-height: none;
+			overflow: visible;
+		}
+	}
+
 	.accordion__content {
 		padding: 25px 15px 40px;
 
