@@ -26,15 +26,6 @@
 	};
 
 	@at-root {
-		#{&}__search {
-			padding-right: 20px;	
-		}
-
-		#{&}__search,
-		.hamburger {
-			font-size: 18px;
-		}
-
 		#{&}__utilities {
 			position: relative;
 			z-index: 200;

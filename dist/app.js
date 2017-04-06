@@ -70,7 +70,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(2);
+__webpack_require__(3);
 
 /***/ }),
 /* 1 */
@@ -80,41 +80,53 @@ __webpack_require__(2);
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+var sectionAccordion = {
+	toggleAccordion: function toggleAccordion() {
+		var that = this;
+
+		$('.accordion__header').click(function () {
+
+			var accordion = $(this).closest('.accordion');
+			var header = $(this);
+
+			if (that.checkIfLink(header)) {
+				return;
+			}
+
+			if (accordion.hasClass('is-opened')) {
+				that.close(accordion);
+			} else {
+				that.open(accordion);
+			}
+		});
+	},
+	open: function open(accordion) {
+		accordion.addClass('is-opened');
+	},
+	close: function close(accordion) {
+		accordion.removeClass('is-opened');
+	},
+	checkIfLink: function checkIfLink(header) {
+		return header.is('a');
+	},
+	init: function init() {
+		this.toggleAccordion();
+	}
+};
+
+sectionAccordion.init();
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 window.$ = __webpack_require__(5);
 
 // Require our js files.
-__webpack_require__(3);
 __webpack_require__(10);
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-var MobileHeader = {
-	toggleMenu: function toggleMenu() {
-		var ham = $('.hamburger');
-		var menu = $('.header-mobile .mega-menu');
-
-		ham.click(function () {
-
-			var opened = menu.hasClass('is-opened');
-
-			if (opened) {
-				menu.removeClass('is-opened');
-				return;
-			}
-
-			menu.addClass('is-opened');
-		});
-	},
-	init: function init() {
-		this.toggleMenu();
-	}
-};
-
-MobileHeader.init();
+__webpack_require__(2);
 
 /***/ }),
 /* 4 */,
@@ -10392,41 +10404,30 @@ module.exports = __webpack_require__(1);
 /* 10 */
 /***/ (function(module, exports) {
 
-var sectionAccordion = {
-	toggleAccordion: function toggleAccordion() {
-		var that = this;
+var offcanvas = {
+	toggleOffCanvasItem: function toggleOffCanvasItem() {
+		var controller = $('.off-canvas__control');
+		var itemClassPrefix = '.off-canvas__';
 
-		$('.accordion__header').click(function () {
+		controller.click(function () {
 
-			var accordion = $(this).closest('.accordion');
-			var header = $(this);
+			var itemClassName = itemClassPrefix + $(this).data('controls');
+			var item = $(itemClassName);
 
-			if (that.checkIfLink(header)) {
+			if (item.hasClass('is-opened')) {
+				item.removeClass('is-opened');
 				return;
 			}
 
-			if (accordion.hasClass('is-opened')) {
-				that.close(accordion);
-			} else {
-				that.open(accordion);
-			}
+			item.addClass('is-opened');
 		});
 	},
-	open: function open(accordion) {
-		accordion.addClass('is-opened');
-	},
-	close: function close(accordion) {
-		accordion.removeClass('is-opened');
-	},
-	checkIfLink: function checkIfLink(header) {
-		return header.is('a');
-	},
 	init: function init() {
-		this.toggleAccordion();
+		this.toggleOffCanvasItem();
 	}
 };
 
-sectionAccordion.init();
+offcanvas.init();
 
 /***/ })
 /******/ ]);
