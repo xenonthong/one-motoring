@@ -22,7 +22,8 @@
 		}
 
 		#{&}__title {
-			font-family: $font-pri--black;
+			font-family: $font-pri;
+			font-weight: 900;
 			font-size: 18px;
 			color: $grey;
 		}
@@ -49,12 +50,27 @@
 }
 
 .card-collection {
-	overflow-x:scroll;
+	overflow-x:auto;
 
-	// .card {
-		// 	@include grid-media($sm-grid) {
-		// 		width: 230px;
-		// 		float: left;
-		// 	}
-		// }
+	&::-webkit-scrollbar {
+		width: 0px;  /* remove scrollbar space */
+		background: transparent;  /* optional: just make scrollbar invisible */
+	}
+
+	@at-root {
+		// Defaults to hold 3 cards.
+		#{&}__group {
+			min-width: calc(316px * 3); // width of each card (300px) + margin of each card (15px) + some offset for shadows.
+
+			@include grid-media($lg-grid) {
+				max-width: none;
+			}
+
+			.card {
+				@media screen and (max-width: $bp-lg) {
+					width: 300px;
+				}
+			}
+		}
+	}
 }

@@ -10,11 +10,11 @@
 
 @import "partials/general";
 @import "partials/typography";
-@import "partials/sections";
 
 // Components
 @import "components/coe-updates";
 @import "components/traffic-updates";
+@import "components/accordion";
 @import "components/table";
 @import "components/form";
 @import "components/header";
@@ -23,4 +23,5 @@
 @import "components/search";
 @import "components/hero";
 @import "components/card";
+@import "partials/sections";
 @import "components/footer";

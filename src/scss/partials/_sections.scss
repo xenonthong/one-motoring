@@ -5,8 +5,27 @@
 		padding: 40px 0;
 	}
 
-	#{&}__accordion-header {
+	.accordion__header {
 		margin: 0;
+		padding: 30px 0;
+
+		font-size: 24px;
+		font-family: $font-sec;
+		color: $white;
+
+		&:after {
+			top: 0;
+			bottom: 0;
+			height: 31px;
+		}
+	}
+
+	.accordion__content {
+		padding: 25px 15px 40px;
+
+		@include grid-media($lg-grid) {
+			padding: 0;
+		}
 	}
 
 	@at-root {
@@ -33,70 +52,6 @@
 				font-size: 20px;
 			}
 		}
-
-		#{&}__accordion {
-			&.is-opened {
-				.section__accordion-body {
-					max-height: 2000px; // Just a random height that we'll never exceed.
-				}
-
-				.section__accordion-header:after {
-					transform: rotate(90deg);
-				}
-			}
-		}
-
-		#{&}__accordion-header {
-			position: relative;
-
-			display: block;
-			padding: 30px 0;
-
-			color: #ffffff;
-			font-size: 24px;
-			font-family: $font-sec;
-
-			&:after {
-				content: '\f054';
-
-				position: absolute;
-				right: 20px;
-				top: 0;
-				bottom: 0;
-				height: 31px;
-
-				margin: auto;
-
-				font-family: $font-fa;
-				transition: transform .2s ease-in-out;
-			}
-
-			@include grid-media($lg-grid) {
-				position: static;
-				font-size: 30px;
-			}
-		}
-
-		#{&}__accordion-body {
-			display: block;
-			max-height: 0;
-
-			overflow: hidden;
-			transition: max-height .5s ease-in-out;
-
-			@include grid-media($md-grid) {
-				max-height: none;
-				overflow: visible;
-			}
-		}
-
-		#{&}__accordion-content {
-			padding: 25px 15px 40px;
-
-			@include grid-media($lg-grid) {
-				padding: 0;
-			}
-		}
 	}
 }
 
@@ -104,6 +59,14 @@
 .section--secondary-news {
 	background-image: linear-gradient(-45deg, #fafafa 46%, #e4e4e4 49%, #e4e4e4 51%, #fafafa 55%);
 	background-size: 10px 10px;
+
+	.card__title {
+		min-height: 100px;
+
+		@include grid-media($lg-grid) {
+			min-height: auto;
+		}
+	}
 }
 
 // Login
@@ -124,7 +87,7 @@
 		}
 	}
 
-	.section__accordion-header {
+	.acoordion__header {
 		margin-top: 0px;
 	}
 
@@ -143,7 +106,7 @@
 			padding-left: 30px;
 		}
 
-		.section__accordion-header {
+		.accordion__header {
 			background: #fecd20;
 
 			@include grid-media($md-grid) {
@@ -157,7 +120,7 @@
 			padding-right: 60px;
 		}
 
-		.section__accordion-header {
+		.accordion__header {
 			background: #7a7b92;
 			color: $white;
 
@@ -188,9 +151,7 @@
 .section--traffic-cameras {
 	padding: 0;
 
-	.section__accordion-header {
-		padding: 30px 0 75px;
-
+	.accordion__header {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -205,7 +166,7 @@
 		}
 	}
 
-	.section__accordion-body {
+	.accordion__body {
 		position: relative;
 		z-index: 100;
 	}

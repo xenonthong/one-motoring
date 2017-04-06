@@ -86,7 +86,7 @@ window.$ = __webpack_require__(5);
 
 // Require our js files.
 __webpack_require__(3);
-__webpack_require__(4);
+__webpack_require__(10);
 
 /***/ }),
 /* 3 */
@@ -109,76 +109,15 @@ var MobileHeader = {
 			menu.addClass('is-opened');
 		});
 	},
-	toggleMenuItems: function toggleMenuItems() {
-		var menuItems = $('.header-mobile li');
-		var collapsedArrow = 'fa-chevron-right';
-		var expandedArrow = 'fa-chevron-down';
-
-		menuItems.click(function (e) {
-			e.stopPropagation();
-
-			item = $(this);
-
-			if (item.hasClass('is-opened')) {
-				item.removeClass('is-opened');
-
-				item.find('> .fa').removeClass(expandedArrow).addClass(collapsedArrow);
-				return;
-			}
-
-			item.addClass('is-opened');
-			item.find('> .fa').removeClass(collapsedArrow).addClass(expandedArrow);
-		});
-	},
 	init: function init() {
 		this.toggleMenu();
-		this.toggleMenuItems();
 	}
 };
 
 MobileHeader.init();
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-var sectionAccordion = {
-	toggleAccordion: function toggleAccordion() {
-		var that = this;
-
-		$('.section__accordion-header').click(function () {
-
-			var accordion = $(this).parent('.section__accordion');
-			var header = $(this);
-
-			if (that.checkIfLink(header)) {
-				return;
-			}
-
-			if (accordion.hasClass('is-opened')) {
-				that.close(accordion);
-			} else {
-				that.open(accordion);
-			}
-		});
-	},
-	open: function open(accordion) {
-		accordion.addClass('is-opened');
-	},
-	close: function close(accordion) {
-		accordion.removeClass('is-opened');
-	},
-	checkIfLink: function checkIfLink(header) {
-		return header.is('a');
-	},
-	init: function init() {
-		this.toggleAccordion();
-	}
-};
-
-sectionAccordion.init();
-
-/***/ }),
+/* 4 */,
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10445,6 +10384,49 @@ return jQuery;
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
+
+/***/ }),
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
+/***/ (function(module, exports) {
+
+var sectionAccordion = {
+	toggleAccordion: function toggleAccordion() {
+		var that = this;
+
+		$('.accordion__header').click(function () {
+
+			var accordion = $(this).closest('.accordion');
+			var header = $(this);
+
+			if (that.checkIfLink(header)) {
+				return;
+			}
+
+			if (accordion.hasClass('is-opened')) {
+				that.close(accordion);
+			} else {
+				that.open(accordion);
+			}
+		});
+	},
+	open: function open(accordion) {
+		accordion.addClass('is-opened');
+	},
+	close: function close(accordion) {
+		accordion.removeClass('is-opened');
+	},
+	checkIfLink: function checkIfLink(header) {
+		return header.is('a');
+	},
+	init: function init() {
+		this.toggleAccordion();
+	}
+};
+
+sectionAccordion.init();
 
 /***/ })
 /******/ ]);

@@ -33,7 +33,6 @@
 	}
 }
 
-
 .grid-collapsed {
 	@include grid-media($sm-grid) {
 		@include grid-collapse($sm-grid);
@@ -80,6 +79,25 @@
 	.col-lg-#{$i} {
 		@include grid-media($lg-grid) {
 			@include grid-column($i);
+		}
+	}
+}
+
+.rtl {
+	[class*="col-"] {
+		float: right;
+		margin-left: 0;
+
+		@include grid-media($sm-grid) {
+			margin-right: $gutter-sm;
+		}
+
+		@include grid-media($md-grid) {
+			margin-right: $gutter-md;
+		}
+
+		@include grid-media($lg-grid) {
+			margin-right: $gutter-lg;
 		}
 	}
 }

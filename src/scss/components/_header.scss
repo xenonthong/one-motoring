@@ -31,7 +31,7 @@
 		}
 
 		#{&}__search,
-		hamburger {
+		.hamburger {
 			font-size: 18px;
 		}
 
@@ -44,5 +44,28 @@
 
 			background: $white;
 		}
+	}
+
+	li:last-child {
+		margin: 0;
+	}
+	
+	.accordion:first-child {
+		.accordion__header {
+			padding: 0;
+		}
+	}
+
+	.accordion__header {
+		padding: 0;
+
+		&:after {
+			right: auto;
+			margin-left: 10px;
+		}
+	}
+
+	.accordion__content {
+		padding: 15px 0 0 25px;
 	}
 }

@@ -2,18 +2,19 @@
 
 $sm-grid: (
 	columns: $columns-sm,
-	gutter: 15px,
+	gutter: $gutter-sm,
 	media: $bp-sm
 );
 
 $md-grid: (
   columns: $columns-md,
-  gutter: 15px,
+  gutter: $gutter-md,
   media: $bp-md
 );
 
+
 $lg-grid: (
   columns: $columns-lg,
-  gutter: 30px,
+  gutter: $gutter-lg,
   media: $bp-lg
 );

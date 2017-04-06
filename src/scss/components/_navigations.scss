@@ -26,7 +26,7 @@
 			float: left;
 			padding-top: 11px;
 
-			font-family: $font-pri--black;
+			font-weight: 900;
 		}
 
 		#{&}__link {
@@ -56,24 +56,12 @@
 				color: $grey;
 			}
 		}
-
-		#{&}__link--special {
-			padding-left: 20px;
-			padding-bottom: 0;
-
-			border-left: solid 1px $grey;
-
-			a {
-				color: $purple;
-			}
-		}
 	}
 
 	.btn--login {
 		padding: 35px;
 	}
 }
-
 
 // Here comes the mega menu
 .mega-menu {
@@ -179,12 +167,7 @@
 			}
 		}
 
-		#{&}__items--l2,
-		#{&}__items--l3 {
-
-			margin: 15px 0 0 25px;
-			display: none;
-
+		#{&}__items--l2 {
 			@include grid-media($lg-grid) {
 				height: auto;
 				margin: 0;
@@ -193,4 +176,23 @@
 			}
 		}
 	}
+}
+
+.special-menu-item {
+
+	border-top: solid 2px #3f4fa0;
+	padding-top: 25px;
+	margin-top: 30px;
+
+	@include grid-media($lg-grid) {
+		padding-left: 20px;
+		padding-bottom: 0;
+
+		border-left: solid 1px $grey;
+
+		a {
+			color: $purple;
+		}
+	}
+
 }

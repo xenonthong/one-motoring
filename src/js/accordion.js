@@ -3,9 +3,9 @@ var sectionAccordion = {
 	toggleAccordion() {
 		let that = this;
 
-		$('.section__accordion-header').click(function() {
+		$('.accordion__header').click(function() {
 
-			let accordion = $(this).parent('.section__accordion');
+			let accordion = $(this).closest('.accordion');
 			let header = $(this);
 
 			if (that.checkIfLink(header)) {

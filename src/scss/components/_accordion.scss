@@ -1,0 +1,53 @@
+.accordion {
+	&.is-opened {
+		> .accordion__body {
+			max-height: 2000px; // Just a random height that we'll never exceed.
+		}
+
+		> .accordion__header:after {
+			transform: rotate(90deg);
+		}
+	}
+
+	#{&}__header {
+		position: relative;
+
+		display: block;
+		padding: 15px;
+
+		&:after {
+			content: '\f054';
+
+			position: absolute;
+			right: 20px;
+
+			margin: auto;
+			padding-top: 3px;
+
+			font-family: $font-fa;
+			transition: transform .2s ease-in-out;
+		}
+
+		@include grid-media($lg-grid) {
+			position: static;
+			font-size: 30px;
+		}
+	}
+
+	#{&}__body {
+		display: block;
+		max-height: 0;
+
+		overflow: hidden;
+		transition: max-height .5s ease-in-out;
+
+		@include grid-media($md-grid) {
+			max-height: none;
+			overflow: visible;
+		}
+	}
+
+	#{&}__content {
+		padding: 15px;
+	}
+}
