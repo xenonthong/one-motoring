@@ -1,4 +1,10 @@
 // Off-canvas controls for mobile header.
+.off-canvas-lock {
+	
+	main {
+		filter: blur(3px);
+	}
+}
 
 .off-canvas {
 	padding-top: 10px;
@@ -24,7 +30,7 @@
 
 			background: rgba(#1d212d, .95);
 			transition: transform .3s;
-			transform: translate3d(0, calc(-100% - 86px), 0); // height of the off-canvas item + header
+			transform: translate3d(0, calc(-100% - 85px), 0); // height of the off-canvas item + header
 			
 			&.is-opened {
 				transform: translate3d(0, 0, 0);

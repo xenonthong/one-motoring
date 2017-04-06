@@ -141,15 +141,25 @@ var offcanvas = {
 
 			var itemClassName = itemClassPrefix + $(this).data('controls');
 			var item = $(itemClassName);
+			var body = $('body');
 
 			if (item.hasClass('is-opened')) {
 				item.removeClass('is-opened');
+				offcanvas.removeEffect(body);
+
 				return;
 			}
 
 			$('.off-canvas__content').removeClass('is-opened');
 			item.addClass('is-opened');
+			offcanvas.addEffect(body);
 		});
+	},
+	addEffect: function addEffect(body) {
+		body.addClass('off-canvas-lock');
+	},
+	removeEffect: function removeEffect(body) {
+		body.removeClass('off-canvas-lock');
 	},
 	init: function init() {
 		this.toggleOffCanvasItem();

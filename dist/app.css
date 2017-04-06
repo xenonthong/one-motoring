@@ -3735,6 +3735,11 @@ h4 {
   padding: 15px;
 }
 
+.off-canvas-lock main {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
 .off-canvas {
   padding-top: 10px;
 }
@@ -3759,8 +3764,8 @@ h4 {
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
-  -webkit-transform: translate3d(0, calc(-100% - 86px), 0);
-          transform: translate3d(0, calc(-100% - 86px), 0);
+  -webkit-transform: translate3d(0, calc(-100% - 85px), 0);
+          transform: translate3d(0, calc(-100% - 85px), 0);
 }
 
 .off-canvas__content.is-opened {
