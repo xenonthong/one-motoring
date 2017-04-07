@@ -1,12 +1,18 @@
 .btn {
 	$shadow-color: $purple;
 
+	& + .btn {
+		margin-left: 30px;
+	}
+
 	padding: 12px 30px;
 	display: inline-block;
+	border: none;
 
+	font-family: $font-pri;
+	font-size: 16px;
 	text-align: center;
 	color: $white;
-	border: none;
 	outline: none;
 	border-radius: 10px;
 	background-color: $shadow-color;

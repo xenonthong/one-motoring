@@ -3098,6 +3098,14 @@ table {
   clip: auto;
 }
 
+/**
+ * @TODO:
+ * REMOVE ALL THESE CLASSES SUCH AS 
+ * - container-md-up 
+ * - grid-collapsed-md-up
+ *
+ * FIND A BETTER WAY TO MANAGE THESE DISPLAYS.
+ */
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -3220,7 +3228,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .col-md-1 {
-    width: calc(12.5% - 16.875px);
+    width: calc(8.33333333% - 16.25px);
     float: left;
     margin-left: 15px;
   }
@@ -3228,7 +3236,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .col-md-2 {
-    width: calc(25% - 18.75px);
+    width: calc(16.66666667% - 17.5px);
     float: left;
     margin-left: 15px;
   }
@@ -3236,7 +3244,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .col-md-3 {
-    width: calc(37.5% - 20.625px);
+    width: calc(25% - 18.75px);
     float: left;
     margin-left: 15px;
   }
@@ -3244,7 +3252,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .col-md-4 {
-    width: calc(50% - 22.5px);
+    width: calc(33.33333333% - 20px);
     float: left;
     margin-left: 15px;
   }
@@ -3252,7 +3260,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .col-md-5 {
-    width: calc(62.5% - 24.375px);
+    width: calc(41.66666667% - 21.25px);
     float: left;
     margin-left: 15px;
   }
@@ -3260,7 +3268,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .col-md-6 {
-    width: calc(75% - 26.25px);
+    width: calc(50% - 22.5px);
     float: left;
     margin-left: 15px;
   }
@@ -3268,7 +3276,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .col-md-7 {
-    width: calc(87.5% - 28.125px);
+    width: calc(58.33333333% - 23.75px);
     float: left;
     margin-left: 15px;
   }
@@ -3276,6 +3284,38 @@ table {
 
 @media only screen and (min-width: 768px) {
   .col-md-8 {
+    width: calc(66.66666667% - 25px);
+    float: left;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-9 {
+    width: calc(75% - 26.25px);
+    float: left;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-10 {
+    width: calc(83.33333333% - 27.5px);
+    float: left;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-11 {
+    width: calc(91.66666667% - 28.75px);
+    float: left;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-12 {
     width: calc(100% - 30px);
     float: left;
     margin-left: 15px;
@@ -3403,6 +3443,8 @@ table {
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
 }
 
 body {
@@ -3422,6 +3464,12 @@ img {
 
 i {
   font-style: italic;
+}
+
+hr {
+  border: 0;
+  border-top: solid 1px #dddddd;
+  margin: 50px auto;
 }
 
 .left {
@@ -3560,6 +3608,37 @@ i {
   }
 }
 
+.standard-content::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .standard-content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+.captioned-image,
+blockquote {
+  width: calc(83.33333333% - 27.5px);
+  float: left;
+  margin-left: 15px;
+  margin-left: calc(8.33333333% - 16.25px + 30px);
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.captioned-image {
+  text-align: center;
+}
+
+.captioned-image img {
+  width: 100%;
+}
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/vendor/font-awesome/fontawesome-webfont.eot?v=4.7.0");
@@ -3574,18 +3653,24 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
   font-family: "Francois One", sans-serif;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
 }
 
 h1 {
   font-size: 30px;
+  line-height: 36px;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 22px;
 }
 
 h3 {
@@ -3593,7 +3678,41 @@ h3 {
 }
 
 h4 {
+  font-size: 26px;
+}
+
+h5 {
   font-size: 18px;
+  font-weight: 900;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+figcaption {
+  padding: 10px;
+  font: "Lato", sans-serif 14px;
+  color: #666666;
+  line-height: 20px;
+}
+
+blockquote {
+  border-left: solid 3px #fecd20;
+  padding-left: 35px;
+  font: 28px "Lato", sans-serif;
+  font-weight: 300;
+  color: #333333;
+}
+
+.page-title {
+  margin-bottom: 25px;
 }
 
 .text-pri {
@@ -3735,13 +3854,18 @@ h4 {
   padding: 15px;
 }
 
-.off-canvas-lock main {
+.off-canvas-effect main,
+.off-canvas-effect footer {
   -webkit-filter: blur(3px);
           filter: blur(3px);
 }
 
 .off-canvas {
   padding-top: 10px;
+}
+
+.off-canvas .is-active .fa-bars:before {
+  content: '\f00d';
 }
 
 .off-canvas__control {
@@ -3808,14 +3932,102 @@ th {
   vertical-align: middle;
 }
 
+.bullet {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 20px 0 20px 40px;
+}
+
+.number {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin: 20px 0 20px 40px;
+}
+
+.number li {
+  padding-left: 5px;
+}
+
+.bullet li,
+.number li {
+  margin-bottom: 20px;
+}
+
+.bullet li:last-child,
+.number li:last-child {
+  margin-bottom: 0;
+}
+
+.classic-form__btn-group {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.classic-form__field {
+  width: calc(50% - 15px);
+  float: left;
+  margin-bottom: 15px;
+}
+
+.classic-form__field:first-child {
+  margin-right: 15px;
+}
+
+.classic-form__field:last-child {
+  margin-left: 15px;
+}
+
+.classic-form__field.has-error input {
+  border: solid 1px #ab0000;
+}
+
+.classic-form__field.has-error .classic-form__field-error {
+  display: block;
+}
+
+.classic-form__field-error {
+  display: none;
+  padding-top: 3px;
+  font-size: 14px;
+  font-style: italic;
+  color: #ab0000;
+}
+
+label {
+  display: block;
+  padding-bottom: 7px;
+  font-weight: 700;
+  color: #666666;
+}
+
 input[type="text"],
 textarea {
-  background: #e9edf5;
-  border: 0;
-  font-size: 16px;
-  font-style: italic;
   padding: 10px 17px 10px 20px;
+  border: solid 1px #dddddd;
+  width: 100%;
+  background: #e9edf5;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
   outline: 0;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+input[type="text"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  font-style: italic;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+  font-style: italic;
+}
+
+.field-group {
+  margin-bottom: 15px;
 }
 
 .header-desktop {
@@ -3980,6 +4192,10 @@ textarea {
   display: block;
 }
 
+.mega-menu a {
+  padding: 0;
+}
+
 .mega-menu li,
 .mega-menu a {
   color: #ffffff;
@@ -4020,6 +4236,10 @@ textarea {
   font-family: "Lato", sans-serif;
 }
 
+.mega-menu__items--l1, .mega-menu__items--l2 {
+  min-height: calc(340px - 60px);
+}
+
 .mega-menu__items--l1 {
   width: 100%;
   max-width: 280px;
@@ -4029,6 +4249,13 @@ textarea {
   .mega-menu__items--l1 {
     position: relative;
   }
+  .mega-menu__items--l1 > li:after {
+    content: '\f054';
+    position: absolute;
+    padding-top: 3px;
+    margin-left: 7px;
+    font-family: "FontAwesome";
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -4036,16 +4263,9 @@ textarea {
     position: absolute;
     left: 280px;
     top: 0;
-    margin-left: 0;
+    margin: 0;
     width: 200%;
     max-width: 480px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .mega-menu__items--l2 {
-    height: auto;
-    margin: 0;
     display: none;
   }
 }
@@ -4073,9 +4293,11 @@ textarea {
 .btn {
   padding: 12px 30px;
   display: inline-block;
+  border: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
   text-align: center;
   color: #ffffff;
-  border: none;
   outline: none;
   border-radius: 10px;
   background-color: #3f4fa0;
@@ -4084,6 +4306,10 @@ textarea {
   transition: box-shadow .1s, -webkit-transform .1s;
   transition: transform .1s, box-shadow .1s;
   transition: transform .1s, box-shadow .1s, -webkit-transform .1s;
+}
+
+.btn + .btn {
+  margin-left: 30px;
 }
 
 .btn:hover {
@@ -4337,6 +4563,12 @@ textarea {
   color: #ffffff;
 }
 
+@media only screen and (min-width: 768px) {
+  .section .accordion__header {
+    color: #444444;
+  }
+}
+
 .section .accordion__header:after {
   top: 0;
   bottom: 0;
@@ -4411,7 +4643,7 @@ textarea {
   background-position: left bottom;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .section--login-panel {
     padding: 70px 0 0;
   }
@@ -4423,8 +4655,14 @@ textarea {
   }
 }
 
-.section--login-panel .acoordion__header {
+.section--login-panel .accordion__header {
   margin-top: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section--login-panel .accordion__header {
+    display: none;
+  }
 }
 
 .section--login-panel a {
@@ -4442,11 +4680,13 @@ textarea {
 }
 
 .section--home-updates .traffic-updates .accordion__header {
+  padding: 30px 15px;
   background: #fecd20;
 }
 
 @media only screen and (min-width: 768px) {
   .section--home-updates .traffic-updates .accordion__header {
+    padding: 30px 0;
     background: none;
   }
 }
@@ -4458,12 +4698,14 @@ textarea {
 }
 
 .section--home-updates .coe-updates .accordion__header {
+  padding: 30px 15px;
   background: #7a7b92;
   color: #ffffff;
 }
 
 @media only screen and (min-width: 768px) {
   .section--home-updates .coe-updates .accordion__header {
+    padding: 30px 0;
     background: none;
     color: #444444;
   }
@@ -4492,6 +4734,7 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: #ffffff;
 }
 
 .section--traffic-cameras .accordion__header:after {

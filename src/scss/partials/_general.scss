@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -19,6 +21,12 @@ img {
 
 i {
 	font-style: italic;
+}
+
+hr {
+	border: 0;
+	border-top: solid 1px $border-grey;
+	margin: 50px auto;
 }
 
 
@@ -145,5 +153,32 @@ i {
 	
 	@include grid-media($lg-grid) {
 		display: inline;
+	}
+}
+
+.standard-content {
+	@include grid-container();
+
+	@include grid-media($md-grid) {
+		max-width: 750px;
+		margin: 0 auto;
+	}
+}
+
+.captioned-image,
+blockquote {
+	@include grid-column(10, $md-grid);
+	@include grid-push(1, $md-grid);
+
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.captioned-image {
+
+	text-align: center;
+
+	img {
+		width: 100%;
 	}
 }

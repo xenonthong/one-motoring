@@ -18,18 +18,24 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
 	font-family: $font-sec;
+}
+
+h4,
+h5,
+h6 {
+	font-family: $font-pri;
+	font-weight: 700;
 }
 
 h1 {
 	font-size: 30px;
+	line-height: 36px;
 }
 
 h2 {
-	font-size: 26px;
+	font-size: 22px;
 }
 
 h3 {
@@ -37,7 +43,43 @@ h3 {
 }
 
 h4 {
+	font-size: 26px;
+}
+
+h5 {
 	font-size: 18px;
+	font-weight: 900;
+}
+
+h6 {
+	font-size: 18px;
+}
+
+p {
+	font-family: $font-pri;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+
+figcaption {
+	padding: 10px;
+
+	font: $font-pri 14px;
+	color: $grey--lighter;
+	line-height: 20px;
+}
+
+blockquote {
+	border-left: solid 3px $yellow;
+	padding-left: 35px;
+
+	font: 28px $font-pri;
+	font-weight: 300;
+	color: $grey--dark;
+}
+
+.page-title {
+	margin-bottom: 25px;
 }
 
 .text-pri {

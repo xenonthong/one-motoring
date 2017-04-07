@@ -1,9 +1,73 @@
+.classic-form {
+	@at-root {
+		#{&}__btn-group {
+			padding-top: 30px;
+			text-align: center;
+		}
+
+		#{&}__field {
+			width: calc(50% - 15px);
+			float: left;
+			margin-bottom: 15px;
+
+			&:first-child {
+				margin-right: 15px;
+			}
+
+			&:last-child {
+				margin-left: 15px;
+			}
+
+			&.has-error {
+				input {
+					border: solid 1px $red;
+				}
+
+				.classic-form__field-error {
+					display: block;
+				}
+			}
+		}
+
+		#{&}__field-error {
+			display: none;
+			padding-top: 3px;
+
+			font-size: 14px;
+			font-style: italic;
+			color: $red;
+		}
+	}
+}
+
+label {
+	display: block;
+	padding-bottom: 7px;
+
+	font-weight: 700;
+	color: $grey--lighter;
+}
+
+select {
+	// display: none;
+}
+
 input[type="text"],
 textarea {
-	background: $grey--lightest;
-	border: 0;
-	font-size: 16px;
-	font-style: italic;
 	padding: 10px 17px 10px 20px;
+	border: solid 1px $border-grey;
+	width: 100%;
+
+	background: $grey--lightest;
+	font-family: $font-pri;
+	font-size: 16px;
 	outline: 0;
+
+	&::placeholder {
+		font-style: italic;
+	}
+}
+
+.field-group {
+	margin-bottom: 15px;
 }

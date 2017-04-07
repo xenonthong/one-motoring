@@ -1,33 +1,67 @@
 let offcanvas = {
+	
+	/**
+	 * Handles the toggling effect of the hidden menu.
+	 */
 	toggleOffCanvasItem() {
-		let controller = $('.off-canvas__control');
+		let controllers = $('.off-canvas__control');
 		let itemClassPrefix = '.off-canvas__';
 
-		controller.click(function() {
-			
+		controllers.click(function() {
+
+			let clicked = $(this);
 			let itemClassName = itemClassPrefix + $(this).data('controls');
 			let item = $(itemClassName);
 			let body = $('body');
 
+			offcanvas.toggleClickedButton(controllers, clicked);
+
 			if (item.hasClass('is-opened')) {
-				item.removeClass('is-opened');
-				offcanvas.removeEffect(body);
+				offcanvas.close(body, item);
 
 				return;
 			}
 
+			// Ensures not other item is opened.
 			$('.off-canvas__content').removeClass('is-opened');
-			item.addClass('is-opened');
-			offcanvas.addEffect(body);
+			offcanvas.open(body, item);
 		});
 	},
 
-	addEffect(body) {
-		body.addClass('off-canvas-lock');
+	/**
+	 * Manipulates the active class for the off-canvas menu icons.
+	 * @param  object 	controllers	Array of all the the menu icon elements	
+	 * @param  object 	clicked     The selected icon
+	 */
+	toggleClickedButton(controllers, clicked) {
+		if (clicked.hasClass('is-active')) {
+			clicked.removeClass('is-active');
+
+			return;
+		}
+
+		controllers.removeClass('is-active');
+		clicked.addClass('is-active');
 	},
 
-	removeEffect(body) {
-		body.removeClass('off-canvas-lock');
+	/**
+	 * Handles the open action.
+	 * @param  object 	body
+	 * @param  object 	controlledItem	The offcanvas content that will be shown.
+	 */
+	open(body, controlledItem) {
+		body.addClass('off-canvas-effect');
+		controlledItem.addClass('is-opened');
+	},
+
+	/**
+	 * Handles the close action.
+	 * @param  object 	body
+	 * @param  object 	controlledItem	The offcanvas content that will be hidden.
+	 */
+	close(body, controlledItem) {
+		body.removeClass('off-canvas-effect');
+		controlledItem.removeClass('is-opened');
 	},
 
 	init() {

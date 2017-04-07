@@ -105,6 +105,10 @@
 		}
 	}
 
+	a {
+		padding: 0;
+	}
+
 	li,
 	a {
 		color: $white;
@@ -139,12 +143,30 @@
 			font-family: $font-pri;
 		}
 
+		#{&}__items--l1,
+		#{&}__items--l2 {
+			min-height: calc(340px - 60px);
+		}
+
 		#{&}__items--l1 {
 			width: 100%;
 			max-width: 280px;
 
 			@include grid-media($lg-grid) {
 				position: relative;
+
+				> li {
+					&:after {
+						content: '\f054';
+					
+						position: absolute;
+
+						padding-top: 3px;
+						margin-left: 7px;
+
+						font-family: $font-fa;
+					}
+				}
 			}
 		}
 
@@ -154,18 +176,12 @@
 				left: 280px;
 				top: 0;
 
-				margin-left: 0;
+				margin: 0;
 				width: 200%; // 2x of items--l1's width.
 				max-width: 480px;
-			}
-		}
-
-		#{&}__items--l2 {
-			@include grid-media($lg-grid) {
-				height: auto;
-				margin: 0;
 
 				display: none;
+
 			}
 		}
 	}
