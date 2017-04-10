@@ -3619,6 +3619,9 @@ hr {
     max-width: 750px;
     margin: 0 auto;
   }
+  .standard-content:last-child {
+    margin-bottom: 80px;
+  }
 }
 
 .captioned-image,
@@ -3807,8 +3810,16 @@ blockquote {
   margin-top: 3px;
 }
 
+.accordion {
+  margin-bottom: 5px;
+}
+
 .accordion.is-opened > .accordion__body {
   max-height: 2000px;
+}
+
+.accordion.is-opened > .accordion__header {
+  background: #222349;
 }
 
 .accordion.is-opened > .accordion__header:after {
@@ -3816,13 +3827,23 @@ blockquote {
           transform: rotate(90deg);
 }
 
-.accordion .accordion__header {
+.accordion__header {
   position: relative;
   display: block;
   padding: 15px;
+  background: #7a7b92;
+  color: #ffffff;
+  font: 16px "Lato", sans-serif;
+  font-weight: 700;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
 }
 
-.accordion .accordion__header:after {
+.accordion__header:hover {
+  cursor: pointer;
+}
+
+.accordion__header:after {
   content: '\f054';
   position: absolute;
   right: 20px;
@@ -3835,22 +3856,21 @@ blockquote {
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-@media only screen and (min-width: 1024px) {
-  .accordion .accordion__header {
-    position: static;
-    font-size: 30px;
-  }
+.accordion__header--alt {
+  background: #3f4fa0;
 }
 
-.accordion .accordion__body {
+.accordion__body {
   display: block;
   max-height: 0;
+  border: solid 1px #dddddd;
+  border-top: 0;
   overflow: hidden;
   -webkit-transition: max-height .5s ease-in-out;
   transition: max-height .5s ease-in-out;
 }
 
-.accordion .accordion__content {
+.accordion__content {
   padding: 15px;
 }
 
@@ -3908,17 +3928,29 @@ blockquote {
 
 table {
   margin-top: 15px;
+  border: solid 1px #dddddd;
+  border-collapse: collapse;
+  font-size: 16px;
 }
 
 th,
 td {
   text-align: left;
-  padding: 15px 0;
+  padding: 15px 20px;
   vertical-align: top;
+  border-right: solid 1px #dddddd;
 }
 
 tr {
   border-bottom: solid 1px #dddddd;
+}
+
+tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+tr:nth-child(even) {
+  background: #f7f7f7;
 }
 
 tr:last-child {
@@ -3928,7 +3960,6 @@ tr:last-child {
 th {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 18px;
   vertical-align: middle;
 }
 

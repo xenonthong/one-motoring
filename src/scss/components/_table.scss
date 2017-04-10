@@ -1,16 +1,30 @@
 table {
 	margin-top: 15px;
+	border: solid 1px $border-grey;
+
+	border-collapse: collapse;
+	font-size: 16px;
 }
 
 th,
 td {
 	text-align: left;
-	padding: 15px 0;
+	padding: 15px 20px;
 	vertical-align: top;
+
+	border-right: solid 1px $border-grey;
 }
 
 tr {
-	border-bottom: solid 1px $table-border;
+	border-bottom: solid 1px $border-grey;
+	
+	&:nth-child(odd) {
+		background: $white;
+	}
+
+	&:nth-child(even) {
+		background: $bg-grey;
+	}
 
 	&:last-child {
 		border-bottom: none;
@@ -20,6 +34,6 @@ tr {
 th {
 	font-family: $font-pri;
 	font-weight: 700;
-	font-size: 18px;
+	// font-size: 18px;
 	vertical-align: middle;
 }

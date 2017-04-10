@@ -162,6 +162,10 @@ hr {
 	@include grid-media($md-grid) {
 		max-width: 750px;
 		margin: 0 auto;
+
+		&:last-child {
+			margin-bottom: 80px;
+		}
 	}
 }
 

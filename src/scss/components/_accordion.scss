@@ -1,48 +1,72 @@
 .accordion {
+	margin-bottom: 5px;
+
 	&.is-opened {
 		> .accordion__body {
 			max-height: 2000px; // Just a random height that we'll never exceed.
 		}
 
-		> .accordion__header:after {
-			transform: rotate(90deg);
+		> .accordion__header {
+			background: $dark-blue;
+
+			&:after {
+				transform: rotate(90deg);
+			}
 		}
 	}
 
-	#{&}__header {
-		position: relative;
+	@at-root {
+		#{&}__header {
+			position: relative;
 
-		display: block;
-		padding: 15px;
+			display: block;
+			padding: 15px;
 
-		&:after {
-			content: '\f054';
+			background: $purple-grey;
+			color: $white;
+			font: 16px $font-pri;
+			font-weight: 700;
+			transition: background .2s ease-in-out;
 
-			position: absolute;
-			right: 20px;
+			&:hover {
+				cursor: pointer;
+			}
 
-			margin: auto;
-			padding-top: 3px;
+			&:after {
+				content: '\f054';
 
-			font-family: $font-fa;
-			transition: transform .2s ease-in-out;
+				position: absolute;
+				right: 20px;
+
+				margin: auto;
+				padding-top: 3px;
+
+				font-family: $font-fa;
+				transition: transform .2s ease-in-out;
+			}
+
+			@include grid-media($lg-grid) {
+				// position: static;
+				// font-size: 30px;
+			}
 		}
 
-		@include grid-media($lg-grid) {
-			position: static;
-			font-size: 30px;
+		#{&}__header--alt {
+			background: $blue;
 		}
-	}
 
-	#{&}__body {
-		display: block;
-		max-height: 0;
+		#{&}__body {
+			display: block;
+			max-height: 0;
+			border: solid 1px $border-grey;
+			border-top: 0;
 
-		overflow: hidden;
-		transition: max-height .5s ease-in-out;
-	}
+			overflow: hidden;
+			transition: max-height .5s ease-in-out;
+		}
 
-	#{&}__content {
-		padding: 15px;
+		#{&}__content {
+			padding: 15px;
+		}
 	}
 }

@@ -28,7 +28,7 @@
 		outline: 0;
 
 		background: darken($grey--lightest, 5);
-		color: $purple;
+		color: $blue;
 
 		@include grid-media($lg-grid) {
 			color: $grey;
