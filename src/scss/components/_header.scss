@@ -71,3 +71,27 @@
 		padding: 15px 0 0 25px;
 	}
 }
+
+.is-sticky {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+
+	&.header-desktop {
+		padding: 0;
+
+		.logos,
+		.menu-search {
+			display: none;
+		}
+
+		.nav {
+			padding-top: 15px;
+		}
+
+		.nav__link:not(.special-menu-item) {
+			padding-bottom: 20px;
+		}
+	}
+}

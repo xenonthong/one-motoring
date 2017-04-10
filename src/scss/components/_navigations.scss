@@ -23,7 +23,10 @@
 
 	@at-root {
 		#{&}__links {
-			float: left;
+			@include grid-media($lg-grid) {
+				@include grid-column(8);
+			}
+
 			padding-top: 11px;
 
 			font-weight: 900;
@@ -54,6 +57,12 @@
 
 			a {
 				color: $grey;
+			}
+		}
+
+		#{&}__actions {
+			@include grid-media($lg-grid) {
+				@include grid-column(4);
 			}
 		}
 	}
@@ -204,5 +213,13 @@
 			color: $blue;
 		}
 	}
+}
 
+.is-sticky {
+	.mega-menu {
+		@include grid-media($lg-grid) {
+			top: 68px; // Height of sticky menu.
+			min-height: 340px;
+		}
+	}
 }
