@@ -70,6 +70,10 @@
 	.btn--login {
 		padding: 35px;
 	}
+
+	.logo-pri {
+		display: none;
+	}
 }
 
 // Here comes the mega menu
@@ -220,6 +224,17 @@
 		@include grid-media($lg-grid) {
 			top: 68px; // Height of sticky menu.
 			min-height: 340px;
+		}
+	}
+
+	.logo-pri {
+		display: block;
+	}
+
+	.logo-pri,
+	.nav__actions {
+		@include grid-media($lg-grid) {
+			@include grid-column(2);
 		}
 	}
 }

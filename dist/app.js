@@ -63,14 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(4);
+__webpack_require__(3);
 
 /***/ }),
 /* 1 */
@@ -119,24 +119,23 @@ var sectionAccordion = {
 sectionAccordion.init();
 
 /***/ }),
-/* 3 */,
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-window.$ = __webpack_require__(8);
+window.$ = __webpack_require__(7);
 window.jQuery = window.$;
-window.niceSelect = __webpack_require__(5);
+window.niceSelect = __webpack_require__(4);
 
 // Require our js files.
-__webpack_require__(6);
+__webpack_require__(5);
 __webpack_require__(2);
 // require('./backToTop');
-__webpack_require__(7);
+__webpack_require__(6);
 
 $('select').niceSelect();
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /*  jQuery Nice Select - v1.1.0
@@ -316,7 +315,7 @@ $('select').niceSelect();
 })(jQuery);
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 var offcanvas = {
@@ -395,7 +394,7 @@ var offcanvas = {
 offcanvas.init();
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 var stickyMenu = {
@@ -418,7 +417,7 @@ var stickyMenu = {
 stickyMenu.init();
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10678,7 +10677,7 @@ return jQuery;
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
