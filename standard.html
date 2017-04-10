@@ -195,7 +195,7 @@
 							<div class="mega-menu">
 								<div class="container">
 									<div class="mega-menu__category">
-										<h2>Driving</h2>
+										<h2>SELLING/DE-REGISTERING</h2>
 										<img src="img/mega_buying.png" alt="Buying">
 									</div>
 									<ul class="mega-menu__items mega-menu__items--l1 col-lg-10">
@@ -375,6 +375,12 @@
 		<!-- End mobile header-->
 
 		<main class="container">
+			<ul class="breadcrumb">
+				<li><a href="javascript:void(0);">Home</a></li>
+				<li><a href="javascript:void(0);">Driving</a></li>
+				<li><a href="javascript:void(0);">Standard Page</a></li>
+			</ul>
+
 			<div class="standard-content">
 				<h1 class="page-title">Heading 1</h1>
 
@@ -425,7 +431,7 @@
 
 				<br>
 				<br>
-				<div>
+				<div class="btn-groups">
 					<a href="javascript:void(0);" class="btn">See more info<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 					<a class="btn btn--alert" href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i> Login via SingPass</a>
 				</div>
@@ -435,7 +441,7 @@
 
 			<div class="standard-content">
 				<h2 class="page-title">Color Swatches</h2>
-				@TODO: Put jpeg in
+				<img style="width: 100%;" src="img/color_swatch.jpg" alt="Color swatches">
 			</div>
 
 			<hr>
@@ -462,7 +468,7 @@
 						<div class="classic-form__field">
 							<label for="field_2">Category</label>
 							<select>
-								<option value="Category A" disabled selected>Category A</option>
+								<option value="disabled" disabled selected>Select category</option>
 								<option value="Category A">Category A</option>
 								<option value="Category B">Category B</option>
 								<option value="Category C">Category C</option>
@@ -486,35 +492,36 @@
 			<div class="standard-content">
 				<h2 class="page-title">Table</h2>
 
-				<table style="width: 100%;">
+				<!-- Remove 'responsive' class to use default table's behaviour. -->
+				<table class="responsive-table" style="width: 100%;">
 					<tr>
 						<th>Heading</th>
 						<th>Item 1</th>
 						<th>Item 2</th>
 						<th>Item 3</th>
 					<tr>
-						<td>Lorem ipsum dolor sit amet, consectetur</td>
-						<td>SKD 122 A</td>
-						<td>1 Mar 2017</td>
-						<td>10:03 pm</td>
+						<td data-th="Heading">Lorem ipsum dolor sit amet, consectetur</td>
+						<td data-th="Item 1">SKD 122 A</td>
+						<td data-th="Item 2">1 Mar 2017</td>
+						<td data-th="Item 3">10:03 pm</td>
 					</tr>
 					<tr>
-						<td>Lorem ipsum dolor sit amet, consectetur</td>
-						<td>SKD 122 A</td>
-						<td>1 Mar 2017</td>
-						<td>10:03 pm</td>
+						<td data-th="Heading">Lorem ipsum dolor sit amet, consectetur</td>
+						<td data-th="Item 1">SKD 122 A</td>
+						<td data-th="Item 2">1 Mar 2017</td>
+						<td data-th="Item 3">10:03 pm</td>
 					</tr>
 					<tr>
-						<td>Lorem ipsum dolor sit amet, consectetur</td>
-						<td>SKD 122 A</td>
-						<td>1 Mar 2017</td>
-						<td>10:03 pm</td>
+						<td data-th="Heading">Lorem ipsum dolor sit amet, consectetur</td>
+						<td data-th="Item 1">SKD 122 A</td>
+						<td data-th="Item 2">1 Mar 2017</td>
+						<td data-th="Item 3">10:03 pm</td>
 					</tr>
 					<tr>
-						<td>Lorem ipsum dolor sit amet, consectetur</td>
-						<td>SKD 122 A</td>
-						<td>1 Mar 2017</td>
-						<td>10:03 pm</td>
+						<td data-th="Heading">Lorem ipsum dolor sit amet, consectetur</td>
+						<td data-th="Item 1">SKD 122 A</td>
+						<td data-th="Item 2">1 Mar 2017</td>
+						<td data-th="Item 3">10:03 pm</td>
 					</tr>
 				</table>
 			</div>
@@ -569,7 +576,6 @@
 					</div>
 				</div>
 			</div>
-
 		</main>
 
 		<!-- Footer -->
@@ -610,6 +616,10 @@
 			</div>
 		</footer>
 		<!-- End footer -->
+
+		<!-- Back to top -->
+		<a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
+		<!-- End back to top -->
 	</div>
 	<!-- Scripts -->
 	<script src="dist/app.js"></script>

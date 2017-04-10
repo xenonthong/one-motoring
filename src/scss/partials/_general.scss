@@ -159,30 +159,34 @@ hr {
 .standard-content {
 	@include grid-container();
 
+	&:last-child {
+		margin-bottom: 80px;
+	}
+
 	@include grid-media($md-grid) {
 		max-width: 750px;
 		margin: 0 auto;
-
-		&:last-child {
-			margin-bottom: 80px;
-		}
 	}
 }
 
-.captioned-image,
-blockquote {
-	@include grid-column(10, $md-grid);
-	@include grid-push(1, $md-grid);
-
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
-
 .captioned-image {
+	margin-left: -20px;
+	margin-right: -20px;
 
 	text-align: center;
 
 	img {
 		width: 100%;
+	}
+}
+
+.captioned-image,
+blockquote {
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+	@include grid-media($md-grid) {
+		@include grid-column(10, $md-grid);
+		@include grid-push(1, $md-grid);
 	}
 }

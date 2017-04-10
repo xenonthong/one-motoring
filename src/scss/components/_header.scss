@@ -47,13 +47,24 @@
 		}
 	}
 
+	.is-opened {
+		> .accordion__header {
+			background-color: transparent;
+		}
+	}
+
 	.accordion__header {
 		padding: 0;
+		background-color: transparent;
 
 		&:after {
 			right: auto;
 			margin-left: 10px;
 		}
+	}
+
+	.accordion__body {
+		border: 0;
 	}
 
 	.accordion__content {

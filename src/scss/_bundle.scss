@@ -2,9 +2,10 @@
 @import "node_modules/node-reset-scss/scss/reset";
 @import "node_modules/bourbon-neat/core/neat";
 @import "node_modules/font-awesome/scss/font-awesome";
+@import "partials/variables";
+@import "libraries/jquery-nice-select/nice-select";
 
 // Our components/partials
-@import "partials/variables";
 @import "partials/grid-settings";
 @import "partials/grid";
 
@@ -20,6 +21,7 @@
 @import "components/list";
 @import "components/form";
 @import "components/header";
+@import "components/breadcrumb";
 @import "components/navigations";
 @import "components/button";
 @import "components/search";

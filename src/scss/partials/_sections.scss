@@ -1,8 +1,16 @@
+/**
+ * Section specific styling overrides.
+ */
+
 .section {
 	padding: 22px 0;
 
 	@include grid-media($lg-grid) {
 		padding: 40px 0;
+	}
+
+	.accordion {
+		margin-bottom: 0px;
 	}
 
 	.accordion__header {
@@ -11,10 +19,14 @@
 
 		font-size: 24px;
 		font-family: $font-sec;
+		font-weight: normal;
 		color: $white;
 
 		@include grid-media($md-grid) {
 			color: $grey;
+
+			position: static;
+			font-size: 30px;
 		}
 
 		&:after {
@@ -25,6 +37,8 @@
 	}
 
 	.accordion__body {
+		border: 0;
+
 		@include grid-media($md-grid) {
 			max-height: none;
 			overflow: visible;
@@ -100,6 +114,7 @@
 
 	.accordion__header {
 		margin-top: 0px;
+		background: transparent;
 		
 		@include grid-media($md-grid) {
 			display: none;
@@ -167,7 +182,6 @@
 
 	.section__header {
 		display: block;
-
 	}
 }
 

@@ -7,6 +7,30 @@
 	}
 
 	@at-root {
+		#{&}__pricing-table {
+			border: 0;
+
+			th,
+			td {
+				border: 0;
+				
+				padding: 15px 0;
+			}
+
+			tr {
+				border-bottom: solid 1px $border-grey;
+
+				&:nth-child(odd),
+				&:nth-child(even) {
+					background: transparent;
+				}
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+
 		#{&}__desc {
 			font-family: $font-pri;
 			font-size: 14px;

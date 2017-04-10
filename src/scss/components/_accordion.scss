@@ -7,7 +7,7 @@
 		}
 
 		> .accordion__header {
-			background: $dark-blue;
+			background-color: $dark-blue;
 
 			&:after {
 				transform: rotate(90deg);
@@ -43,11 +43,6 @@
 
 				font-family: $font-fa;
 				transition: transform .2s ease-in-out;
-			}
-
-			@include grid-media($lg-grid) {
-				// position: static;
-				// font-size: 30px;
 			}
 		}
 

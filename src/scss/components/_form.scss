@@ -6,16 +6,20 @@
 		}
 
 		#{&}__field {
-			width: calc(50% - 15px);
-			float: left;
+			width: 100%;
 			margin-bottom: 15px;
 
-			&:first-child {
-				margin-right: 15px;
-			}
+			@include grid-media($md-grid) {
+				width: calc(50% - 15px);
+				float: left;
 
-			&:last-child {
-				margin-left: 15px;
+				&:first-child {
+					margin-right: 15px;
+				}
+
+				&:last-child {
+					margin-left: 15px;
+				}
 			}
 
 			&.has-error {
@@ -36,6 +40,24 @@
 			font-size: 14px;
 			font-style: italic;
 			color: $red;
+		}
+	}
+
+	.btn {
+		padding: 12px 60px;
+	}
+
+	.nice-select {
+		width: 100%;
+
+		border-radius: 2px;
+		background: $grey--lightest;
+		font-family: $font-pri;
+		font-size: 16px;
+		color: $grey--lighter;
+
+		.current {
+			font-style: italic;
 		}
 	}
 }
@@ -62,10 +84,15 @@ textarea {
 	font-family: $font-pri;
 	font-size: 16px;
 	outline: 0;
+	border-radius: 2px;
 
 	&::placeholder {
 		font-style: italic;
 	}
+}
+
+textarea {
+	resize: none;
 }
 
 .field-group {

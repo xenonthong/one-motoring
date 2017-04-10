@@ -2,8 +2,8 @@
 
 	@at-root {
 		#{&}__search {
-			input {
-				width: calc(100% - 100px);
+			input[type="text"] {
+				width: calc(100% - 110px);
 				height: 45px;
 				margin-right: 12px;
 			}
@@ -17,10 +17,27 @@
 
 		#{&}__table {
 			margin-top: 42px;
-		}
 
-		#{&}__type {
-			padding-right: 15px;
+			border: 0;
+
+			tr {
+				border-bottom: solid 1px $border-grey;
+
+				&:nth-child(odd),
+				&:nth-child(even) {
+					background: transparent;
+				}
+			}
+		
+			th,
+			td {
+				border: 0;
+				padding: 15px 0;
+			}
+
+			.traffic-updates__type {
+				padding-right: 15px;
+			}
 		}
 
 		#{&}__title {
