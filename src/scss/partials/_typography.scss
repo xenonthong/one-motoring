@@ -65,7 +65,7 @@ figcaption {
 	padding: 10px;
 
 	font: $font-pri 14px;
-	color: $grey--lighter;
+	color: $caption-grey;
 	line-height: 20px;
 }
 
@@ -75,7 +75,7 @@ blockquote {
 
 	font: 28px $font-pri;
 	font-weight: 300;
-	color: $grey--dark;
+	color: $body-copy-grey;
 }
 
 .page-title {

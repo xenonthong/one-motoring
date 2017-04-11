@@ -19,7 +19,7 @@
 	padding: 25px 15px;
 
 	background-color: rgba($yellow, .9);
-	color: $grey--dark;
+	color: $body-copy-grey;
 
 	@include grid-media($md-grid) {
 		width: 35%;

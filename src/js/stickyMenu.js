@@ -1,14 +1,15 @@
 let stickyMenu = {
 	appearAfter(offset) {
-		let menu = $('header:visible');
+		let menus = $('header');
 
-		$(window).scroll(function() {
+		$(window).scroll(debounce(function() {
+			
 			if ($(this).scrollTop() >= offset) {
-				menu.addClass('is-sticky animated slideInDown');
+				menus.addClass('is-sticky animated slideInDown');
 			} else {
-				menu.removeClass('is-sticky animated slideInDown');
+				menus.removeClass('is-sticky animated slideInDown');
 			}
-		});
+		}, 300));
 	},
 
 	init() {

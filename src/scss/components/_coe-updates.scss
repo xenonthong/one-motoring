@@ -1,5 +1,5 @@
 .coe-updates {
-	border-right: solid 1px $table-border;
+	border-right: solid 1px $divider-grey;
 
 	#{&}__indicator {
 		text-align: right;
@@ -18,7 +18,7 @@
 			}
 
 			tr {
-				border-bottom: solid 1px $border-grey;
+				border-bottom: solid 1px $divider-grey;
 
 				&:nth-child(odd),
 				&:nth-child(even) {
@@ -36,7 +36,7 @@
 			font-size: 14px;
 			text-transform: uppercase;
 			letter-spacing: 1px;
-			color: $grey;
+			color: $nav-grey;
 		}
 
 		#{&}__type {

@@ -54,7 +54,7 @@
 		background: $grey--lightest;
 		font-family: $font-pri;
 		font-size: 16px;
-		color: $grey--lighter;
+		color: $caption-grey;
 
 		.current {
 			font-style: italic;
@@ -67,7 +67,7 @@ label {
 	padding-bottom: 7px;
 
 	font-weight: 700;
-	color: $grey--lighter;
+	color: $caption-grey;
 }
 
 select {
@@ -77,17 +77,24 @@ select {
 input[type="text"],
 textarea {
 	padding: 10px 17px 10px 20px;
-	border: solid 1px $border-grey;
+	border: solid 1px $divider-grey;
 	width: 100%;
 
 	background: $grey--lightest;
 	font-family: $font-pri;
 	font-size: 16px;
+	color: $footer-bg-grey;
 	outline: 0;
 	border-radius: 2px;
 
+	&:focus {
+		box-shadow: 0px 0px 19px 2px rgba(233,237,245,0.58);
+		border: solid 1px darken($divider-grey, 5);
+	}
+
 	&::placeholder {
 		font-style: italic;
+		color: $caption-grey;
 	}
 }
 

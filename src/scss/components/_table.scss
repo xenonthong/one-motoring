@@ -1,6 +1,6 @@
 table {
 	margin-top: 15px;
-	border: solid 1px $border-grey;
+	border: solid 1px $divider-grey;
 
 	border-collapse: collapse;
 	font-size: 16px;
@@ -12,11 +12,11 @@ td {
 	padding: 15px 20px;
 	vertical-align: top;
 
-	border-right: solid 1px $border-grey;
+	border-right: solid 1px $divider-grey;
 }
 
 tr {
-	border-bottom: solid 1px $border-grey;
+	border-bottom: solid 1px $divider-grey;
 	
 	&:nth-child(odd) {
 		background: $white;
@@ -42,7 +42,7 @@ th {
 
 	tr {
 		&:nth-child(2) {
-			border-top: solid 1px $border-grey; // Show border top for mobile because the first-child is hidden.
+			border-top: solid 1px $divider-grey; // Show border top for mobile because the first-child is hidden.
 
 			@include grid-media($md-grid) {
 				border-top: 0;
@@ -75,7 +75,7 @@ th {
 
 		@include grid-media($md-grid) {
 			display: table-cell;
-			border-right: solid 1px $border-grey;
+			border-right: solid 1px $divider-grey;
 		}
 	}
 }

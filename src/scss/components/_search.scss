@@ -30,12 +30,9 @@
 		background: darken($grey--lightest, 5);
 		color: $blue;
 
-		@include grid-media($lg-grid) {
-			color: $grey;
-		}
-
 		&:hover {
 			cursor: pointer;
+			color: $dark-blue;
 		}
 	}
 }

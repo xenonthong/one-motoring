@@ -26,10 +26,11 @@
 			color: $white;
 			font: 16px $font-pri;
 			font-weight: 700;
-			transition: background .2s ease-in-out;
+			transition: background .3s ease-in-out;
 
 			&:hover {
 				cursor: pointer;
+				background: $blue;
 			}
 
 			&:after {
@@ -46,14 +47,10 @@
 			}
 		}
 
-		#{&}__header--alt {
-			background: $blue;
-		}
-
 		#{&}__body {
 			display: block;
 			max-height: 0;
-			border: solid 1px $border-grey;
+			border: solid 1px $divider-grey;
 			border-top: 0;
 
 			overflow: hidden;

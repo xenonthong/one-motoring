@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -122,8 +122,9 @@ sectionAccordion.init();
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-window.$ = __webpack_require__(7);
+window.$ = __webpack_require__(9);
 window.jQuery = window.$;
+window.debounce = __webpack_require__(7);
 window.niceSelect = __webpack_require__(4);
 
 // Require our js files.
@@ -399,15 +400,16 @@ offcanvas.init();
 
 var stickyMenu = {
 	appearAfter: function appearAfter(offset) {
-		var menu = $('header:visible');
+		var menus = $('header');
 
-		$(window).scroll(function () {
+		$(window).scroll(debounce(function () {
+
 			if ($(this).scrollTop() >= offset) {
-				menu.addClass('is-sticky animated slideInDown');
+				menus.addClass('is-sticky animated slideInDown');
 			} else {
-				menu.removeClass('is-sticky animated slideInDown');
+				menus.removeClass('is-sticky animated slideInDown');
 			}
-		});
+		}, 300));
 	},
 	init: function init() {
 		stickyMenu.appearAfter(300);
@@ -418,6 +420,76 @@ stickyMenu.init();
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/**
+ * Module dependencies.
+ */
+
+var now = __webpack_require__(8);
+
+/**
+ * Returns a function, that, as long as it continues to be invoked, will not
+ * be triggered. The function will be called after it stops being called for
+ * N milliseconds. If `immediate` is passed, trigger the function on the
+ * leading edge, instead of the trailing.
+ *
+ * @source underscore.js
+ * @see http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
+ * @param {Function} function to wrap
+ * @param {Number} timeout in ms (`100`)
+ * @param {Boolean} whether to execute at the beginning (`false`)
+ * @api public
+ */
+
+module.exports = function debounce(func, wait, immediate){
+  var timeout, args, context, timestamp, result;
+  if (null == wait) wait = 100;
+
+  function later() {
+    var last = now() - timestamp;
+
+    if (last < wait && last > 0) {
+      timeout = setTimeout(later, wait - last);
+    } else {
+      timeout = null;
+      if (!immediate) {
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+      }
+    }
+  };
+
+  return function debounced() {
+    context = this;
+    args = arguments;
+    timestamp = now();
+    var callNow = immediate && !timeout;
+    if (!timeout) timeout = setTimeout(later, wait);
+    if (callNow) {
+      result = func.apply(context, args);
+      context = args = null;
+    }
+
+    return result;
+  };
+};
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = Date.now || now
+
+function now() {
+    return new Date().getTime()
+}
+
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10677,7 +10749,7 @@ return jQuery;
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);

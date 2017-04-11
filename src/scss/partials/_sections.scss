@@ -23,7 +23,7 @@
 		color: $white;
 
 		@include grid-media($md-grid) {
-			color: $grey;
+			color: $nav-grey;
 
 			position: static;
 			font-size: 30px;
@@ -165,7 +165,7 @@
 				padding: 30px 0;
 
 				background: none;
-				color: $grey;
+				color: $nav-grey;
 			}
 		}
 	}
@@ -176,7 +176,7 @@
 	}
 
 	h1 {
-		color: $grey;
+		color: $nav-grey;
 		margin-bottom: 10px;
 	}
 
