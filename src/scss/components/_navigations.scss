@@ -23,10 +23,6 @@
 
 	@at-root {
 		#{&}__links {
-			@include grid-media($lg-grid) {
-				@include grid-column(8);
-			}
-
 			padding-top: 11px;
 
 			font-weight: 900;
@@ -235,6 +231,14 @@
 	.nav__actions {
 		@include grid-media($lg-grid) {
 			@include grid-column(2);
+		}
+	}
+}
+
+.header-desktop {
+	.nav__links {
+		@include grid-media($lg-grid) {
+			@include grid-column(8);
 		}
 	}
 }

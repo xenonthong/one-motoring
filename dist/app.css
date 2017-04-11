@@ -7540,14 +7540,6 @@ textarea {
   font-weight: 900;
 }
 
-@media only screen and (min-width: 1024px) {
-  .nav__links {
-    width: calc(66.66666667% - 50px);
-    float: left;
-    margin-left: 30px;
-  }
-}
-
 .nav__link {
   float: left;
   margin-right: 13px;
@@ -7747,6 +7739,14 @@ textarea {
   .is-sticky .logo-pri,
   .is-sticky .nav__actions {
     width: calc(16.66666667% - 35px);
+    float: left;
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-desktop .nav__links {
+    width: calc(66.66666667% - 50px);
     float: left;
     margin-left: 30px;
   }
