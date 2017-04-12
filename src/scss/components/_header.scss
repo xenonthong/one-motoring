@@ -12,7 +12,26 @@
 	};
 
 	.mega-menu {
-		display: none;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.nav__link:hover {
+		.mega-menu {
+		    opacity: 1;
+			visibility: visible;
+
+			@extend .animated;
+			animation-duration: .5s;
+			animation-delay: .3s;
+			@extend .fadeInLeft;
+		}
+	}
+
+	.nav__links {
+		@include grid-media($lg-grid) {
+			@include grid-column(8);
+		}
 	}
 }
 

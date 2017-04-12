@@ -35,14 +35,6 @@
 
 			color: $nav-grey;
 
-			&:hover {
-				@include grid-media($lg-grid) {
-					.mega-menu {
-						display: block;
-					}
-				}
-			}
-
 			&:last-child {
 				margin-right: 0;
 			}
@@ -231,14 +223,6 @@
 	.nav__actions {
 		@include grid-media($lg-grid) {
 			@include grid-column(2);
-		}
-	}
-}
-
-.header-desktop {
-	.nav__links {
-		@include grid-media($lg-grid) {
-			@include grid-column(8);
 		}
 	}
 }

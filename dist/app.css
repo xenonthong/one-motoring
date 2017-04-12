@@ -3616,27 +3616,30 @@ table {
  *
  * Copyright (c) 2016 Daniel Eden
  */
-.animated {
+.animated, .header-desktop .nav__link:hover .mega-menu {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.animated.infinite {
+.animated.infinite, .header-desktop .nav__link:hover .infinite.mega-menu {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-.animated.hinge {
+.animated.hinge, .header-desktop .nav__link:hover .hinge.mega-menu {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-.animated.flipOutX,
+.animated.flipOutX, .header-desktop .nav__link:hover .flipOutX.mega-menu,
 .animated.flipOutY,
+.header-desktop .nav__link:hover .flipOutY.mega-menu,
 .animated.bounceIn,
-.animated.bounceOut {
+.header-desktop .nav__link:hover .bounceIn.mega-menu,
+.animated.bounceOut,
+.header-desktop .nav__link:hover .bounceOut.mega-menu {
   -webkit-animation-duration: .75s;
   animation-duration: .75s;
 }
@@ -4784,7 +4787,7 @@ table {
   }
 }
 
-.fadeInLeft {
+.fadeInLeft, .header-desktop .nav__link:hover .mega-menu {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
@@ -5249,7 +5252,7 @@ table {
   }
 }
 
-.animated.flip {
+.animated.flip, .header-desktop .nav__link:hover .flip.mega-menu {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -7406,7 +7409,25 @@ textarea {
 }
 
 .header-desktop .mega-menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header-desktop .nav__link:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-desktop .nav__links {
+    width: calc(66.66666667% - 50px);
+    float: left;
+    margin-left: 30px;
+  }
 }
 
 .header-mobile {
@@ -7557,12 +7578,6 @@ textarea {
   margin-right: 13px;
   padding-bottom: 35px;
   color: #444444;
-}
-
-@media only screen and (min-width: 1024px) {
-  .nav__link:hover .mega-menu {
-    display: block;
-  }
 }
 
 .nav__link:last-child {
@@ -7751,14 +7766,6 @@ textarea {
   .is-sticky .logo-pri,
   .is-sticky .nav__actions {
     width: calc(16.66666667% - 35px);
-    float: left;
-    margin-left: 30px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .header-desktop .nav__links {
-    width: calc(66.66666667% - 50px);
     float: left;
     margin-left: 30px;
   }
@@ -8001,7 +8008,7 @@ textarea {
 }
 
 .card:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
 .card .category {
@@ -8099,6 +8106,12 @@ textarea {
   font-family: "Francois One", sans-serif;
   font-weight: normal;
   color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .section .accordion__header:hover {
+    cursor: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -8227,6 +8240,12 @@ textarea {
 .section--home-updates .traffic-updates .accordion__header {
   padding: 30px 15px;
   background: #fecd20;
+}
+
+@media only screen and (min-width: 768px) {
+  .section--home-updates .traffic-updates .accordion__header:after {
+    content: '';
+  }
 }
 
 @media only screen and (min-width: 768px) {
