@@ -107,6 +107,11 @@
 	background: url(../img/login_panel_bg.png) #222349 no-repeat;
 	box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.4);
 	background-position: left bottom;
+	color: $white;
+
+	p {
+		font-size: 20px;
+	}
 
 	@include grid-media($md-grid) {
 		padding: 70px 0 0;

@@ -3102,6 +3102,7 @@ table {
   -webkit-tap-highlight-color: transparent;
   background-color: #fff;
   border-radius: 5px;
+  border: solid 1px #dddddd;
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
@@ -6944,6 +6945,10 @@ blockquote {
   font-family: "Lato", sans-serif;
 }
 
+.text-pri--bold {
+  font-weight: 700;
+}
+
 .text-sec {
   font-family: "Francois One", sans-serif;
 }
@@ -7771,18 +7776,26 @@ textarea {
   }
 }
 
+.btn-groups {
+  text-align: center;
+}
+
 .btn-groups .btn {
   margin: 0 0 30px;
 }
 
 .btn-groups .btn:last-child {
-  margin: 0;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 768px) {
   .btn-groups .btn {
-    margin-left: 0 30px 0 0;
+    margin-left: 0;
   }
+}
+
+.btn-groups--left {
+  text-align: left;
 }
 
 .btn {
@@ -8198,6 +8211,11 @@ textarea {
   background: url(../img/login_panel_bg.png) #222349 no-repeat;
   box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
   background-position: left bottom;
+  color: #ffffff;
+}
+
+.section--login-panel p {
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 768px) {

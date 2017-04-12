@@ -1,13 +1,21 @@
 .btn-groups {
+	text-align: center;
+
 	.btn {
 		margin: 0 0 30px;
 
 		&:last-child {
-			margin: 0;
+			margin-bottom: 0;
 		}
 
 		@include grid-media($md-grid) {
-			margin-left: 0 30px 0 0;
+			margin-left: 0;
+		}
+	}
+
+	@at-root {
+		#{&}--left {
+			text-align: left;
 		}
 	}
 }
